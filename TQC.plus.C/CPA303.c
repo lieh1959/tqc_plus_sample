@@ -1,22 +1,24 @@
+/* TQC+ C - 303 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int num = 100;
 
 void subFun();
+
 int main()
 {
-	int num = 200;//³]©w¤@­Ó°Ï°ìÅÜ¼Æ
-	printf("¦bmain¨ç¼Æ¤¤ªºnum¬°%d\n", num);
-	subFun();
-	
-	system("PAUSE");
-	return 0;
+    int num = 200;  /* è¨­å®šä¸€å€‹å€åŸŸè®Šæ•¸ */
+
+    printf("åœ¨mainå‡½æ•¸ä¸­çš„numç‚º%d\n", num);
+    subFun();
+    system("PAUSE");
+
+    return 0;
 }
 
-void subFun()//¦]¬°¨S¦³­n¦^¶Ç¡A©Ò¥H³]©w¦¨void´N¦n
+void subFun()  /* å› ç‚ºæ²’æœ‰è¦å›å‚³ï¼Œæ‰€ä»¥è¨­å®šæˆvoidå°±å¥½ */
 {
-	printf("¦bsubFun¨ç¼Æ¤¤ªºnum¬°%d\n", num);
-
+    printf("åœ¨subFunå‡½æ•¸ä¸­çš„numç‚º%d\n", num);
 }
-

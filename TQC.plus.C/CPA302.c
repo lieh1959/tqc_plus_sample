@@ -1,26 +1,34 @@
+/* TQC+ C - 302 */
+
 #include <stdio.h>
 #include <stdlib.h>
+
 int adjust(int);
-int main () 
+
+int main ()
 {
-	int score, final;
-	printf("½Ð¿é¤J±zªº¤À¼Æ: ");
-	scanf("%d", &score);
-	
-	final = adjust(score);//°O±o­n±N¶Ç¦^¨Óªº¤À¼Æ¼g¤JfinalÅÜ¼Æ¤¤
- 
-	printf("½Õ¾ã«áªº¤À¼Æ: %d", final);
-	system("PAUSE");
-	return 0;
+    int score, final;
+
+    printf("è«‹è¼¸å…¥æ‚¨çš„åˆ†æ•¸: ");
+    scanf("%d", &score);
+
+    final = adjust(score);
+    /* è¨˜å¾—è¦å°‡å‚³å›žä¾†çš„åˆ†æ•¸å¯«å…¥finalè®Šæ•¸ä¸­ */
+
+    printf("èª¿æ•´å¾Œçš„åˆ†æ•¸: %d", final);
+    system("PAUSE");
+
+    return 0;
 }
 
 int adjust(int score)
 {
-	int temp;//«Å§iÅÜ¼Æ
-	if (score >= 60) 
-		temp = score + 10;
-	else 
-		temp = score + 5;
+    int temp;  /* å®£å‘Šè®Šæ•¸ */
 
-	return temp;
+    if (score >= 60)
+        temp = score + 5;
+    else
+        temp = score + 10;
+
+    return temp;
 }

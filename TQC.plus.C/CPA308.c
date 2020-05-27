@@ -1,32 +1,38 @@
+/* TQC+ C - 308 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 double sum(double a[], int n);
-int main () 
+
+int main ()
 {
-	double arr[5];
-	int i;
-	double total=0;//ßÔ¨∞double≈‹º∆
-	for(i=0; i<5; i++) {
-		  printf("Ω–øÈ§J∞}¶Carr[%d]§∏Ø¿≠»: ", i);
-		  scanf("%lf", &arr[i]);//•[§W&∞—∑”
-	}
-	
-	for(i=0; i<5; i++)
-		  printf("arr[%d]=%.2f\n", i, arr[i]);
-	
-	total=sum(arr,i);
-	printf("¶π∞}¶C™∫¡`©M¨∞%.2f\n", total);
-	system("PAUSE");
-	return 0;
+    double arr[5];
+    int i;
+    double total=0; /* ÊîπÁÇ∫doubleËÆäÊï∏ */
+
+    for(i=0; i<5; i++) {
+        printf("Ë´ãËº∏ÂÖ•Èô£Âàóarr[%d]ÂÖÉÁ¥†ÂÄº: ", i);
+        scanf("%lf", &arr[i]); /* Âä†‰∏ä&ÂèÉÁÖß */
+    }
+
+    for(i=0; i<5; i++)
+        printf("arr[%d]=%.2f\n", i, arr[i]);
+
+    total=sum(arr,i);
+    printf("Ê≠§Èô£ÂàóÁöÑÁ∏ΩÂíåÁÇ∫%.2f\n", total);
+    system("PAUSE");
+
+    return 0;
 }
 
-double sum(double a[], int n)//≠◊ßÔ∂«§J∞—º∆™∫´¨∫Adouble
+double sum(double a[], int n) /* ‰øÆÊîπÂÇ≥ÂÖ•ÂèÉÊï∏ÁöÑÂûãÊÖãdouble */
 {
-	int k;
-	double tot=0;//≥]©w•[¡`™Ï©l≠»0
-	for(k=0; k<n; k++)
+    int k;
+    double tot = 0; /* Ë®≠ÂÆöÂä†Á∏ΩÂàùÂßãÂÄº0 */
+
+    for(k = 0; k < n; k++)
         tot += a[k];
-	return tot;
-}
 
+    return tot;
+}

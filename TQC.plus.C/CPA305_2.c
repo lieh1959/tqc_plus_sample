@@ -1,6 +1,10 @@
-//CPD03-2.c的程式如下：
-int callTotal(int x,int y){
+/* TQC+ C - 305_2 */
+
+/* CPD03-2.c code */
+int callTotal(int x,int y)
+{
     int sum;
-    sum=x+y;
+    sum = x + y;
+
     return sum;
 }

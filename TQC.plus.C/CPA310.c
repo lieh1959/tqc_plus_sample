@@ -1,30 +1,27 @@
+/* TQC+ C - 310 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
     int arr[5]={100, 200, 300, 400, 500};
-	int i;
-	
-	printf("\n°}¦C¤¸¯Àªº­È¦p¤U:\n");
-	for (i=0; i<5; i++)//iªº°_©l­È¬°0
-	{
-		 printf("arr[%d]=%d\n", i, arr[i]);
-	}
-	//%p¬O¥Î¨ÓÅã¥Ü¦ì§}ªº°Ñ·Ó
-	printf("\n°}¦C¤¸¯Àªº¦ì§}¦p¤U:\n");
-	for (i=0; i<5; i++) //iªº°_©l­È¬°0
-	{
-		 printf("&arr[%d]=%p\n", i, &arr[i]);
-	}
-//³oÃä¬O±N¨C¤@­Ó¤¸¯À¦ì§}Åã¥Ü¥X¨Ó
-	
-	printf("\n°}¦C¤¸¯Àªº¦ì§}¦p¤U:\n");
-	for (i=0; i<5; i++)//iªº°_©l­È¬°0 
-	{
-		 printf("&arr[%d]=%p\n", i, arr+i);
-	}
-	
-	system("PAUSE");
-	return 0;
+    int i;
+
+    printf("\né™£åˆ—å…ƒç´ çš„å€¼å¦‚ä¸‹:\n");
+    for (i=0; i<5; i++) /* içš„èµ·å§‹å€¼ç‚º0 */
+        printf("arr[%d]=%d\n", i, arr[i]);
+
+    /* %pæ˜¯ç”¨ä¾†é¡¯ç¤ºä½å€çš„åƒç…§ */
+    printf("\né™£åˆ—å…ƒç´ çš„ä½å€å¦‚ä¸‹:\n");
+    for (i=0; i<5; i++)  /* içš„èµ·å§‹å€¼ç‚º0 */
+        printf("&arr[%d]=%p\n", i, &arr[i]);
+
+    /* é€™é‚Šæ˜¯å°‡æ¯ä¸€å€‹å…ƒç´ ä½å€é¡¯ç¤ºå‡ºä¾† */
+    printf("\né™£åˆ—å…ƒç´ çš„ä½å€å¦‚ä¸‹:\n");
+    for (i=0; i<5; i++) /* içš„èµ·å§‹å€¼ç‚º0 */
+        printf("&arr[%d]=%p\n", i, arr+i);
+    system("PAUSE");
+
+    return 0;
 }

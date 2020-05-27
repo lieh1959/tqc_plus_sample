@@ -1,20 +1,21 @@
+/* TQC+ C - 307 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-	double arr2[2][3], total=0.0;
-	int i, j;
-	
-	for (i=0; i<2; i++)//«Å§i¤j¤p¬°2®É¡A¸Ì­±ªºindex¶È¦³0©M1©Ò¥H§PÂ_®É¶È»Ý­n¤p©ó2§Y¥i 
-		for (j=0; j<3; j++) {//§PÂ_¦¡¤èªk¦P¤W
-			printf("½Ð¿é¤Jarr[%d][%d]ªº­È: ", i, j);
-			scanf("%lf", &arr2[i][j]);//¿é¤J®É%lf¬O¿é¤Jdouble¥Îªº¡A¦Ó¥B«á­±ªº°Ñ·Ó¥²¶·­n¥[¤W&
-			total += arr2[i][j];
-		}
-	
-	printf("Á`©M¬°%.2f\n", total);
-	system("PAUSE");
-	return 0;
-}
+    double arr2[2][3], total=0.0;
+    int i, j;
 
+    for (i=0; i<2; i++)  /* å®£å‘Šå¤§å°ç‚º2æ™‚ï¼Œè£¡é¢çš„indexåƒ…æœ‰0å’Œ1æ‰€ä»¥åˆ¤æ–·æ™‚åƒ…éœ€è¦å°æ–¼2å³å¯ */
+        for (j=0; j<3; j++) {  /* åˆ¤æ–·å¼æ–¹æ³•åŒä¸Š */
+            printf("è«‹è¼¸å…¥arr[%d][%d]çš„å€¼: ", i, j);
+            scanf("%lf", &arr2[i][j]);  /* è¼¸å…¥æ™‚%lfæ˜¯è¼¸å…¥doubleç”¨çš„ï¼Œè€Œä¸”å¾Œé¢çš„åƒç…§å¿…é ˆè¦åŠ ä¸Š& */
+            total += arr2[i][j];
+        }
+        printf("ç¸½å’Œç‚º%.2f\n", total);
+        system("PAUSE");
+
+    return 0;
+}

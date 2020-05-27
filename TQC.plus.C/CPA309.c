@@ -1,34 +1,38 @@
+/* TQC+ C - 309 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int max(int a[], int n);
-int main () 
+
+int main ()
 {
-	int arr[5], i, maximum;
-	
-	for(i=0; i<5; i++) {
-		 printf("½Ð¿é¤J°}¦Carr[%d]¤¸¯À­È: ", i);
-		 scanf("%d", &arr[i]);//«ØÄ³§â³oÃäªº´«¦æ²Å¸¹§R°£
-	}
-	
-	for(i=0; i<5; i++)
-		 printf("arr[%d]=%d\n", i, arr[i]);
-	
-	maximum=max(arr, 5);
-	printf("¦¹°}¦C³Ì¤j­È¬°%d\n", maximum);
-	system("PAUSE");
-	return 0;
+    int arr[5], i, maximum;
+
+    for(i = 0; i < 5; i++) {
+        printf("è«‹è¼¸å…¥é™£åˆ—arr[%d]å…ƒç´ å€¼: ", i);
+        scanf("%d", &arr[i]); /* å»ºè­°æŠŠé€™é‚Šçš„æ›è¡Œç¬¦è™Ÿåˆªé™¤ */
+    }
+
+    for(i = 0; i < 5; i++)
+        printf("arr[%d]=%d\n", i, arr[i]);
+
+    maximum = max(arr, 5);
+    printf("æ­¤é™£åˆ—æœ€å¤§å€¼ç‚º%d\n", maximum);
+    system("PAUSE");
+
+    return 0;
 }
 
 int max(int a[], int n)
 {
-	int k, M;
-	M=a[0];
-	for(k=1; k<n; k++){
-		if (a[k]>M) {//¦pªG¤j©óÁ{®ÉÅÜ¼ÆM¡A«h´À¥NMªº­È
-			M=a[k];
-		}
- 	}
-	return M;
-}
+    int k, M;
 
+    M = a[0];
+    for(k=1; k < n; k++) {
+        if(a[k] > M) /* å¦‚æžœå¤§æ–¼è‡¨æ™‚è®Šæ•¸Mï¼Œå‰‡æ›¿ä»£Mçš„å€¼ */
+        M=a[k];
+    }
+
+    return M;
+}

@@ -1,24 +1,31 @@
+/* TQC+ C - 304 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 void callFun();
+
 int main()
 {
-	int i;
-	for (i=1; i<=5; i++) {
-		  callFun();
-	}
+    int i;
 
-	system("PAUSE");
-	return 0;
+    for (i=1; i<=5; i++)
+        callFun();
+    system("PAUSE");
+
+    return 0;
 }
 
 void callFun()
 {
-	int ai=100;
-	static int si=100;
-	//ÔÚß@ß…Œ¢si×ƒ³Éstatic È«Óò×ƒ”µ£¬×ŒËû×ƒ³ÉËùÓÐ…^Óò¶¼¿´µÃ¶®£¬ËùÒÔÐû¸æß^áá£¬ÔÙ´ÎÐû¸æ¾Í›]ÒâÁx£¬Òò´Ë•þŒ¢ËüßMÐÐÀÛ¼Ó¡£
-	ai++;
-	si++;
-	printf("ai=%d, si=%d\n", ai, si);//ÒªÑaÉÏ“QÐÐ·ûÌ–
+    int ai = 100;
+    static int si = 100;
+    /* åœ¨é€™é‚Šå°‡siè®Šæˆstatic å…¨åŸŸè®Šæ•¸ï¼Œ
+     * è®“ä»–è®Šæˆæ‰€æœ‰å€åŸŸéƒ½çœ‹å¾—æ‡‚ï¼Œ
+     * æ‰€ä»¥å®£å‘ŠéŽå¾Œï¼Œå†æ¬¡å®£å‘Šå°±æ²’æ„ç¾©ï¼Œ
+     * å› æ­¤æœƒå°‡å®ƒé€²è¡Œç´¯åŠ ã€‚
+     */
+    ai++;
+    si++;
+    printf("ai=%d, si=%d\n", ai, si);  /* è¦è£œä¸Šæ›è¡Œç¬¦è™Ÿ */
 }

@@ -1,15 +1,18 @@
+/* TQC+ C - 306 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
-	int arr[6]={10, 20, 30, 40, 50, 60};//¶≥§ª≠”§∏Ø¿°A§j§p¿≥≥]©w¨∞6
-	int i, total=0;
-	for (i=0; i<6; i++) {//∞}¶C™∫index±q0∂}©l
-  		  total += arr[i];
-	}
-	
-	printf("¡`©M¨∞%d\n", total);//≈„•‹™∫º∆¶r¨∞æ„º∆Ω–•Œ%d
-	system("PAUSE");
-	return 0;
+    int arr[6] = {10, 20, 30, 40, 50, 60};  /* ÊúâÂÖ≠ÂÄãÂÖÉÁ¥†ÔºåÂ§ßÂ∞èÊáâË®≠ÂÆöÁÇ∫6 */
+    int i, total = 0;
+
+    for (i = 0; i < 6; i++) { /* Èô£ÂàóÁöÑindexÂæû0ÈñãÂßã */
+        total += arr[i];
+    }
+    printf("Á∏ΩÂíåÁÇ∫%d\n", total);  /* È°ØÁ§∫ÁöÑÊï∏Â≠óÁÇ∫Êï¥Êï∏Ë´ãÁî®%d */
+    system("PAUSE");
+
+    return 0;
 }
