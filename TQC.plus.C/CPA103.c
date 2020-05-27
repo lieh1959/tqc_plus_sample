@@ -1,12 +1,15 @@
+/* TQC+ C - 103 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-void main ()
+int main ()
 {
-	int i=100, j=200;//§ï¦¨¥­±`«Å§iªºint©Mdouble§Y¥i
+	int i=100, j=200; /* æ”¹æˆå¹³å¸¸å®£å‘Šçš„intå’Œdoubleå³å¯*/
 	double d=123.456;
 	printf("%d+%d=%d\n", i, j, i+j);
 	printf("d=%.1f\n", d);
 	system("PAUSE");
 
+	return 0;
 }

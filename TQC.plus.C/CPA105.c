@@ -1,24 +1,34 @@
+/* TQC+ C - 105 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main ()
 {
-	int a, b, c, total;
-	double average;
- 	printf("½Ğ¿é¤J²Ä¤@­Ó¾ã¼Æ? ");
-	scanf("%d", &a);
-	printf("½Ğ¿é¤J²Ä¤G­Ó¾ã¼Æ? ");
-	scanf("%d", &b);
-	printf("½Ğ¿é¤J²Ä¤T­Ó¾ã¼Æ? ");
-	scanf("%d", &c);
+ int a, b, c, total;
+ double average;
 
-	total = a+b+c;
-	average = total/3.0;
-	//¦b°£ªk¦pªG¥kÃäªº¹Bºâ¤¸¯À¬Ò¬°int«h¹Bºâµ²ªG¥ç¬°int¡A¶È­n¨ä¤@¤¸¯À¬°double¡A§Y¥iÅı¹Bºâ¹Lµ{¬°double
+ printf("è«‹è¼¸å…¥ç¬¬ä¸€å€‹æ•´æ•¸? ");
+ scanf("%d", &a);
+ printf("è«‹è¼¸å…¥ç¬¬äºŒå€‹æ•´æ•¸? ");
+ scanf("%d", &b);
+ printf("è«‹è¼¸å…¥ç¬¬ä¸‰å€‹æ•´æ•¸? ");
+ scanf("%d", &c);
 
-	printf("%d+%d+%d=%d\n", a, b,c, total);//Âù¤Ş¸¹ªº°Ñ·Ó¦³´X­Ó¡A«á­±ªºÅÜ¼ÆÄæ¦ì´N­n¦³´X­Ó ps.¦pªG a+b ºâ¤@­ÓÄæ¦ì
-	printf("¥­§¡¼Æ¬°%.2f", average);
-	//³]©w¤p¼Æ²Ä¤G¦ì³]©w¤èªk.?¡A°İ¸¹¬°¦ì¼Æ
-	system("PAUSE");
-	return 0;
+ total = a+b+c;
+ average = total/3.0;
+ /* åœ¨é™¤æ³•å¦‚æœå³é‚Šçš„é‹ç®—å…ƒç´ çš†ç‚ºintå‰‡é‹ç®—çµæœäº¦ç‚ºint
+  * åƒ…è¦å…¶ä¸€å…ƒç´ ç‚ºdoubleï¼Œå³å¯è®“é‹ç®—éç¨‹ç‚ºdouble
+  */
+
+ printf("%d+%d+%d=%d\n", a, b,c, total);
+ /* é›™å¼•è™Ÿçš„åƒç…§æœ‰å¹¾å€‹ï¼Œå¾Œé¢çš„è®Šæ•¸æ¬„ä½å°±è¦æœ‰å¹¾å€‹
+  * ps.å¦‚æœ a+b ç®—ä¸€å€‹æ¬„ä½
+  */
+
+ printf("å¹³å‡æ•¸ç‚º%.2f", average);
+ /* è¨­å®šå°æ•¸ç¬¬äºŒä½è¨­å®šæ–¹æ³•.?ï¼Œå•è™Ÿç‚ºä½æ•¸ */
+ system("PAUSE");
+
+ return 0;
 }

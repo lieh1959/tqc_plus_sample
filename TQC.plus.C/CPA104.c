@@ -1,3 +1,5 @@
+/* TQC+ C - 104 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,12 +8,17 @@ int main()
 	int unit;
 	double price=23.34;
 	double total;
-	printf("½Ğ°İ±z­n¶R´X²~Ä«ªG¥Ä? ");
+
+	printf("è«‹å•æ‚¨è¦è²·å¹¾ç“¶è˜‹æœæ±? ");
 	scanf("%d", &unit);
-	total = unit*price;
-	//¦]¬°%³o­Ó²Å¸¹¦bµ{¦¡½X¤¤¦³ÂI°Ñ·Óªº·N«ä¡A©Ò¥Hª½±µÅı¥¦print¬OµLªkÅã¥Üªº¡A©Ò¥H¥²¶·¿é¤J%%Åı¥¦¥i¥HÅã¥Ü¥X¨Ó
-	printf("§Ú¶R¤F%d²~100%%ªºÄ«ªG¥Ä\n", unit);
-	printf("ªá¤F%f¤¸", total);
+	total = unit * price;
+ 	/* å› ç‚º%é€™å€‹ç¬¦è™Ÿåœ¨ç¨‹å¼ç¢¼ä¸­æœ‰é»åƒç…§çš„æ„æ€
+ 	 * æ‰€ä»¥ç›´æ¥è®“å®ƒprintæ˜¯ç„¡æ³•é¡¯ç¤ºçš„
+ 	 * æ‰€ä»¥å¿…é ˆè¼¸å…¥%%è®“å®ƒå¯ä»¥é¡¯ç¤ºå‡ºä¾†
+ 	 */
+	printf("æˆ‘è²·äº†%dç“¶100%%çš„è˜‹æœæ±\n", unit);
+	printf("èŠ±äº†%få…ƒ", total);
 	system("PAUSE");
+
 	return 0;
 }

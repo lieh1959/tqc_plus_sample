@@ -1,30 +1,33 @@
+/* TQC+ C - 108 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main ()
 {
 	double a, b, c, d, e, f;
-  	printf("½Ğ¿é¤J²Ä¤@­Ó¯BÂI¼Æ: ");
+	printf("è«‹è¼¸å…¥ç¬¬ä¸€å€‹æµ®é»æ•¸: ");
 	scanf("%lf", &a);
-  	printf("½Ğ¿é¤J²Ä¤G­Ó¯BÂI¼Æ: ");
+	printf("è«‹è¼¸å…¥ç¬¬äºŒå€‹æµ®é»æ•¸: ");
 	scanf("%lf", &b);
-  	printf("½Ğ¿é¤J²Ä¤T­Ó¯BÂI¼Æ: ");
+	printf("è«‹è¼¸å…¥ç¬¬ä¸‰å€‹æµ®é»æ•¸: ");
 	scanf("%lf", &c);
-  	printf("½Ğ¿é¤J²Ä¥|­Ó¯BÂI¼Æ: ");
+	printf("è«‹è¼¸å…¥ç¬¬å››å€‹æµ®é»æ•¸: ");
 	scanf("%lf", &d);
-  	printf("½Ğ¿é¤J²Ä¤­­Ó¯BÂI¼Æ: ");
+	printf("è«‹è¼¸å…¥ç¬¬äº”å€‹æµ®é»æ•¸: ");
 	scanf("%lf", &e);
-  	printf("½Ğ¿é¤J²Ä¤»­Ó¯BÂI¼Æ: ");
+	printf("è«‹è¼¸å…¥ç¬¬å…­å€‹æµ®é»æ•¸: ");
 	scanf("%lf", &f);
 
-	printf("\n¦V¥k¾a»ô\n");//­n³]©w¦n¤p¼ÆÂI¤U­±´X¦ì
+	printf("\nå‘å³é é½Š\n");//è¦è¨­å®šå¥½å°æ•¸é»ä¸‹é¢å¹¾ä½
 	printf("%10.2f %10.2f %10.2f\n", a, b, c);
 	printf("%10.2f %10.2f %10.2f\n", d, e, f);
 
-	printf("\n\n¦V¥ª¾a»ô\n");
+	printf("\n\nå‘å·¦é é½Š\n");
 	printf("%-10.2f %-10.2f %-10.2f\n", a, b, c);
 	printf("%-10.2f %-10.2f %-10.2f\n", d, e, f);
 
 	system("PAUSE");
- 	return 0;
+
+	return 0;
 }

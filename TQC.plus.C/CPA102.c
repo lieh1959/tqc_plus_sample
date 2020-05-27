@@ -1,15 +1,21 @@
+/* TQC+ C - 102 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
 	double a, b;
-	printf("½Ğ¿é¤J¨â­Ó¯BÂI¼Æ:");
-	scanf("%lf %lf", &a, &b);//¦bscanf®É¡A«á­±ªº°Ñ·Ó°È¥²­n¸É¤W&²Å¸¹
-	//%lf»P%f¿é¥X®É¡A³£¬O¯BÂI¼Æ¤§¸q¡A¦ı¿é¤J®É¡A%lf¥Nªídouble¡A%f¥Nªífloat
-	double total ;
-	total = a+b;
-	printf("total=%f", total);
-	system("PAUSE");
-	return 0;
+	printf("è«‹è¼¸å…¥å…©å€‹æµ®é»æ•¸:");
+	scanf("%lf %lf", &a, &b);
+	/* åœ¨scanfæ™‚ï¼Œå¾Œé¢çš„åƒç…§å‹™å¿…è¦è£œä¸Š&ç¬¦è™Ÿ
+ 	 * %lfèˆ‡%fè¼¸å‡ºæ™‚ï¼Œéƒ½æ˜¯æµ®é»æ•¸ä¹‹ç¾©
+ 	 * ä½†è¼¸å…¥æ™‚ï¼Œ%lfä»£è¡¨doubleï¼Œ%fä»£è¡¨float
+ 	 */
+ 	double total ;
+ 	total = a+b;
+ 	printf("total=%f", total);
+ 	system("PAUSE");
+
+ 	return 0;
 }

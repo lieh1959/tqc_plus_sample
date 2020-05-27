@@ -1,11 +1,13 @@
-#include <stdio.h> //°O±o­n¥[¤W¤«¦r¸¹
+/* TQC+ C - 101 */
+
+#include <stdio.h>  /* è¨˜å¾—è¦åŠ ä¸Šäº•å­—è™Ÿ */
 #include <stdlib.h>
 
-int main(){//¤j¬A¸¹©M¤p¬A¸¹­n¤À²M·¡
-
-	printf("Learning C now!\n");
-	printf("and you will enjoy it");//µ²§À³£­n°O±o¥[¤W¤À¸¹
-        //­nÅã¥Üªº¦r½Ğ¥ÎÂù¤Ş¸¹
+int main()
+{	/* å¤§æ‹¬è™Ÿå’Œå°æ‹¬è™Ÿè¦åˆ†æ¸…æ¥š */
+	printf("Learning C now!\n");  /* çµå°¾éƒ½è¦è¨˜å¾—åŠ ä¸Šåˆ†è™Ÿ */
+	printf("and you will enjoy it\n");  /* è¦é¡¯ç¤ºçš„å­—è«‹ç”¨é›™å¼•è™Ÿ */
 	system("PAUSE");
+
 	return 0;
 }
