@@ -1,17 +1,23 @@
+/* TQC+ C - 206 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
 	int i=1, total=0;
-   while (i <= 100)
-{
- 		
-		total += i;
-		i++;//­×§ïµ{¦¡ªºÅÞ¿è¡A¦]¬°i±q1¶}©l¡A©Ò¥H­n¥ý¥[¨ìtotal¸Ì­±¡A¤§«á¦A°µi++ªº°Ê§@
-   } 
-   printf("1¥[¨ì100ªºÁ`©M:%d\n", total);
-	system("PAUSE");
-   return 0;
-}
 
+    while (i <= 100)
+	{
+        total += i;
+        i++;
+        /* ä¿®æ”¹ç¨‹å¼çš„é‚è¼¯ï¼Œå› ç‚ºiå¾ž1é–‹å§‹ï¼Œ
+         * æ‰€ä»¥è¦å…ˆåŠ åˆ°totalè£¡é¢ï¼Œ
+         * ä¹‹å¾Œå†åši++çš„å‹•ä½œ
+         */
+    }
+    printf("1åŠ åˆ°100çš„ç¸½å’Œ:%d\n", total);
+    system("PAUSE");
+
+    return 0;
+}

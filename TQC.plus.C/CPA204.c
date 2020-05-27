@@ -1,22 +1,28 @@
+/* TQC+ C - 204 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-    char ch= NULL; 
-	
-    printf("½Ğ°İ±zªº¨­¥÷:¥H¦r¥Àªí¥Ü¤À§O¦p¤U¡G\nU:ªí¥Ü¤j¾Ç¥Í¡AM:ªí¥Ü¬ã¨s¥Í¡AP:ªí¥Ü³Õ¤h¥Í ");
+    char ch = NULL;
+
+    printf("è«‹å•æ‚¨çš„èº«ä»½:ä»¥å­—æ¯è¡¨ç¤ºåˆ†åˆ¥å¦‚ä¸‹ï¼š\nU:è¡¨ç¤ºå¤§å­¸ç”Ÿï¼ŒM:è¡¨ç¤ºç ”ç©¶ç”Ÿï¼ŒP:è¡¨ç¤ºåšå£«ç”Ÿ ");
     scanf("%c", &ch);
     switch (ch) {
-		case 'U':
-			printf("±z¬O¤j¾Ç¥Í\n");break;
-		case 'M':
-			printf("±z¬O¬ã¨s¥Í\n");break;
-		case 'P':
-			printf("±z¬O³Õ¤h¥Í\n");break;
-		default:
-			printf("±z¿é¤J¨­¥÷¤£¥¿½T\n");
-	}
-	system("PAUSE");
-     	return 0;
+        case 'U':
+            printf("æ‚¨æ˜¯å¤§å­¸ç”Ÿ\n");
+            break;
+        case 'M':
+            printf("æ‚¨æ˜¯ç ”ç©¶ç”Ÿ\n");
+            break;
+        case 'P':
+            printf("æ‚¨æ˜¯åšå£«ç”Ÿ\n");
+            break;
+        default:
+            printf("æ‚¨è¼¸å…¥èº«ä»½ä¸æ­£ç¢º\n");
+    }
+    system("PAUSE");
+
+    return 0;
 }

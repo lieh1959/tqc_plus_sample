@@ -1,37 +1,39 @@
+/* TQC+ C - 205 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-     int i,  num;
-	int num1=0, num2=0, num3=0, num4=0, others=0;
-	
-	for (i=0; i<10; i++) {//±ø¥ó¦¡¬°¤p©óµ¥©ó10¡A¦]¬°ªì©l­È¬°1
-	printf("\n¯Zªø­Ô¿ï¤H¦p¤U:\n1: ¤p¤ı\n2: ¤p§õ\n3: ¤p½²\n4: ¤p³¯\n");
-	 printf("½Ğ°İ±z­n¿ï­ş¦ì­Ô¿ï¤H(1-4):");
-	scanf("%d", &num);
-	switch (num) {
-		     case 1:
-				num1++;
-				break;
-		     case 2:
-				num2++;
-				break;
-		     case 3:
-				num3++;
-				break;
-		     case 4:
-				num4++;
-				break;
-		     default:
-				printf("±z¿é¤Jªº¸¹½X¤£¥¿½T\n");
-				others++;//¸É¤W¼o²¼ªº­pºâ
+    int i,  num;
+    int num1 = 0, num2 = 0, num3 = 0, num4 = 0, others = 0;
 
-		 }
-		 printf("¥Ø«e±o²¼¼Æ\n¤p¤ı:%d, ¤p§õ:%d, ¤p½²:%d, ¤p³¯:%d, ¼o²¼:%d\n", 
-			   num1, num2, num3, num4, others);
-	}
- 
-	system("PAUSE");
-      return 0;
+    for (i=1; i<=10; i++) {
+    /* æ¢ä»¶å¼ç‚ºå°æ–¼ç­‰æ–¼10ï¼Œå› ç‚ºåˆå§‹å€¼ç‚º1 */
+        printf("\nç­é•·å€™é¸äººå¦‚ä¸‹:\n1: å°ç‹\n2: å°æ\n3: å°è”¡\n4: å°é™³\n");
+        printf("è«‹å•æ‚¨è¦é¸å“ªä½å€™é¸äºº(1-4):");
+        scanf("%d", &num);
+        switch (num) {
+            case 1:
+                num1++;
+                break;
+            case 2:
+                num2++;
+                break;
+            case 3:
+                num3++;
+                break;
+            case 4:
+                num4++;
+                break;
+            default:
+                printf("æ‚¨è¼¸å…¥çš„è™Ÿç¢¼ä¸æ­£ç¢º\n");
+                others++;  /* è£œä¸Šå»¢ç¥¨çš„è¨ˆç®— */
+
+        }
+        printf("ç›®å‰å¾—ç¥¨æ•¸\nå°ç‹:%d, å°æ:%d, å°è”¡:%d, å°é™³:%d, å»¢ç¥¨:%d\n", num1, num2, num3, num4, others);
+    }
+    system("PAUSE");
+
+    return 0;
 }

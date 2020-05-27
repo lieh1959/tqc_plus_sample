@@ -1,17 +1,31 @@
+/* TQC+ C - 203 */
+
 #include <stdio.h>
 #include <stdlib.h>
+
 int main()
 {
     int floor;
-    printf("Õˆ†–Äú×¡ÄÄÒ»ŒÓ˜Ç(1-4): ");
+
+    printf("è«‹å•æ‚¨ä½å“ªä¸€å±¤æ¨“(1-4): ");
     scanf("%d", &floor);
     switch(floor) {
-        case 1:printf("Äú×¡ÔÚÒ»˜Ç\n");break;
-        case 2:printf("Äú×¡ÔÚ¶ş˜Ç\n");break;
-        case 3:printf("Äú×¡ÔÚÈı˜Ç\n");break;
-        case 4:printf("Äú×¡ÔÚËÄ˜Ç\n");break;
-        default:printf("Äúİ”ÈëµÄ˜ÇŒÓ²»Õı´_");
-	}
-	system("PAUSE");
-     return 0;
+        case 1:
+            printf("æ‚¨ä½åœ¨ä¸€æ¨“\n");
+            break;
+        case 2:
+            printf("æ‚¨ä½åœ¨äºŒæ¨“\n");
+            break;
+        case 3:
+            printf("æ‚¨ä½åœ¨ä¸‰æ¨“\n");
+            break;
+        case 4:
+            printf("æ‚¨ä½åœ¨å››æ¨“\n");
+            break;
+        default:
+            printf("æ‚¨è¼¸å…¥çš„æ¨“å±¤ä¸æ­£ç¢º");
+    }
+    system("PAUSE");
+
+    return 0;
 }

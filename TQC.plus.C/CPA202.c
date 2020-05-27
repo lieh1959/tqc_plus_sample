@@ -1,17 +1,20 @@
+/* TQC+ C - 202 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
 	int score, adjust;
-	printf("½Ğ¿é¤J¤À¼Æ:");
-	scanf("%d", &score);
-	if (score >= 60)//ª`·Nif(...)±ø¥ó¦¡«á­±¤£¥i¥H¦³¤À¸¹
-	    adjust = score+10;
-	else
-	    adjust = score+5;
-	printf("½Õ¾ã«áªº¤À¼Æ¬°%d", adjust);
 
+	printf("è«‹è¼¸å…¥åˆ†æ•¸:");
+	scanf("%d", &score);
+	if (score >= 60)//æ³¨æ„if(...)æ¢ä»¶å¼å¾Œé¢ä¸å¯ä»¥æœ‰åˆ†è™Ÿ
+	    adjust = score + 10;
+	else
+	    adjust = score + 5;
+	printf("èª¿æ•´å¾Œçš„åˆ†æ•¸ç‚º%d", adjust);
 	system("PAUSE");
+
 	return 0;
 }

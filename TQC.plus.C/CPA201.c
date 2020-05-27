@@ -1,16 +1,21 @@
+/* TQC+ C - 201 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 {
 	int i;
-	printf("Õˆİ”ÈëiÖµ: ");
-	scanf("%d", &i);
-	if (i%2==0)//ÅĞ”àÊÇ·ñÏàÍ¬Ê¹ÓÃ==£¬·Ç”µŒW·ûÌ–µÄ=
-		   printf("%dÊÇÅ¼”µ\n", i);
-	else
-		   printf("%dÊÇÆæ”µ\n", i);
 
+	printf("è«‹è¼¸å…¥iå€¼: ");
+	scanf("%d", &i);
+
+ 	if (i%2 == 0)
+ 	/* åˆ¤æ–·æ˜¯å¦ç›¸åŒä½¿ç”¨==ï¼Œéæ•¸å­¸ç¬¦è™Ÿçš„=*/
+ 		printf("%dæ˜¯å¶æ•¸\n", i);
+ 	else
+ 		printf("%dæ˜¯å¥‡æ•¸\n", i);
 	system("PAUSE");
-     return 0;
+
+	return 0;
 }

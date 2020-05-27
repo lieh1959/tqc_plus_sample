@@ -1,15 +1,22 @@
+/* TQC+ C - 208 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-	int i, total=0;//³]©w¥[Á`ªì©l­È¬°0 
-	for (i=1; i<=100; i++)//­×§ï§PÂ_¦¡ÅÞ¿è¡Afor(...)«á­±¤£¥i¥H¦³¤À¸¹¡A·|ÅÜ±oµL·N¸q
-	if(i%2==0)//³]©w±ø¥ó¡A¦pªG¬°°¸¼Æ¡A«h¶i¤J¥[Á`
-			total += i;
-	
-	printf("1¨ì100ªº°¸¼Æ©M: %d\n", total);
-	system("PAUSE");
-     return 0;
-}
+    int i, total=0; /* è¨­å®šåŠ ç¸½åˆå§‹å€¼ç‚º0 */
 
+    for (i=1; i <= 100; i++)
+        /* ä¿®æ”¹åˆ¤æ–·å¼é‚è¼¯
+         * for(...)å¾Œé¢ä¸å¯ä»¥æœ‰åˆ†è™Ÿ
+         * æœƒè®Šå¾—ç„¡æ„ç¾©
+         */
+    if(i%2 == 0)  /* è¨­å®šæ¢ä»¶ï¼Œå¦‚æžœç‚ºå¶æ•¸ï¼Œå‰‡é€²å…¥åŠ ç¸½ */
+        total += i;
+
+    printf("1åˆ°100çš„å¶æ•¸å’Œ: %d\n", total);
+    system("PAUSE");
+
+    return 0;
+}
