@@ -1,13 +1,17 @@
+/* TQC+ C - 401 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-	int num=100, *pointer;
-	
-	pointer=&num;//³oÃä¬O­n§â«ü¼Ğ¦ì§}¼g¹L¥h
-	
-	printf("num=%d, *pointer=%d\n", num, *pointer);
-	system("PAUSE");
-	return 0;
+    int num=100, *pointer;
+
+    pointer = &num; /* é€™é‚Šæ˜¯è¦æŠŠæŒ‡æ¨™ä½å€å¯«éå» */
+
+    printf("num=%d, *pointer=%d\n", num, *pointer);
+    system("PAUSE");
+
+    return 0;
 }
+

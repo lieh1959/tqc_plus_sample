@@ -1,37 +1,38 @@
+/* TQC+ C - 405 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-	int arr[2][3]={{100, 200, 300},{ 400, 500, 600}};//°}¦C¬O2x3ªº¡A©Ò¥H­n¤À°t¦n¦¨¬°¤Gºû°}¦C
-	int *ptr2[2]={arr[0], arr[1]};
-  	int i, j;
- 
-	
-	for (i=0; i<2; i++) {
-		for (j=0; j<3; j++) {
-			printf("arr[%d][%d]=%d\n", i, j, arr[i][j]);
-		}
- 	}
-	
-	
-	//¥t¤@ºØªí¥Ü¤èªk
-	printf("\n¥t¤@ºØªí¥Ü¤èªk\n");
-	for (i=0; i<2; i++) {
-		for (j=0; j<3; j++) {
-			printf("arr[%d][%d]=%d\n", i, j, *(arr[i]+j));//¸É¤W*Åý¥L¥i¥H³z¹L«ü¼ÐÅª¨ú­È
-		}
-	}
-	
-	
-	//²Ä¤TºØªí¥Ü¤èªk
-	printf("\n²Ä¤TºØªí¥Ü¤èªk\n");
-	for (i=0; i<2; i++) {
-		for (j=0; j<3; j++) {
-			printf("arr[%d][%d]=%d\n", i, j, *(*(ptr2+i)+j));//¦ì¸m­n¸É¤W*
-		}
-	}
- 	
-	system("PAUSE");
-	return 0;
+    int arr[2][3]={{100, 200, 300},{ 400, 500, 600}};
+    /* é™£åˆ—æ˜¯2x3çš„ï¼Œæ‰€ä»¥è¦åˆ†é…å¥½æˆç‚ºäºŒç¶­é™£åˆ— */
+    int *ptr2[2]={arr[0], arr[1]};
+    int i, j;
+
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("arr[%d][%d]=%d\n", i, j, arr[i][j]);
+        }
+    }
+
+    /* å¦ä¸€ç¨®è¡¨ç¤ºæ–¹æ³• */
+    printf("\nå¦ä¸€ç¨®è¡¨ç¤ºæ–¹æ³•\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("arr[%d][%d]=%d\n", i, j, *(arr[i]+j));
+            /* è£œä¸Š*è®“ä»–å¯ä»¥é€éŽæŒ‡æ¨™è®€å–å€¼ */
+        }
+    }
+
+    /* ç¬¬ä¸‰ç¨®è¡¨ç¤ºæ–¹æ³• */
+    printf("\nç¬¬ä¸‰ç¨®è¡¨ç¤ºæ–¹æ³•\n");
+    for (i = 0; i < 2; i++) {
+        for (j=0; j<3; j++) {
+            printf("arr[%d][%d]=%d\n", i, j, *(*(ptr2+i)+j));//ä½ç½®è¦è£œä¸Š*
+        }
+    }
+    system("PAUSE");
+
+    return 0;
 }

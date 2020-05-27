@@ -1,28 +1,31 @@
+/* TQC+ C - 403 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-     int arr[]={100, 200, 300, 400, 500};
-	int *pointer=arr;
-	int i;
- 	
-	for (i=0; i<5; i++) {
-		printf("arr[%d]=%d\n", i, arr[i]);
-	}
-	
-	//¥t¤@ºØªí¥Ü¤èªk
-	printf("\n¥t¤@ºØªí¥Ü¤èªk\n");
-	for (i=0; i<5; i++) {
-		printf("arr[%d]=%d\n", i, *(arr+i));//¦]¬°­n¨ú¦ì§}¡A©Ò¥H­n§â¬ÛÃöªºÅÜ¼Æ¬A¦n
-	}
-	
-	//²Ä¤TºØªí¥Ü¤èªk
-	printf("\n²Ä¤TºØªí¥Ü¤èªk\n");
-	for (i=0; i<5; i++) {
-		printf("arr[%d]=%d\n", i, *(pointer+i));//³oÃäªº¸Ü¡A¦]¬°pointer¤w¸g¾É¦Varrªº°O¾ĞÅé¦ì§}¡A©Ò¥H¥Îªk¸ò¤W­±¤@¼Ë
-	}
-	
-	system("PAUSE");
-	return 0;
+    int arr[]={100, 200, 300, 400, 500};
+    int *pointer=arr;
+    int i;
+
+    for (i = 0 ; i < 5 ; i++) {
+        printf("arr[%d]=%d\n", i, arr[i]);
+    }
+
+    /* å¦ä¸€ç¨®è¡¨ç¤ºæ–¹æ³• */
+    printf("\nå¦ä¸€ç¨®è¡¨ç¤ºæ–¹æ³•\n");
+    for (i = 0; i < 5; i++) {
+        printf("arr[%d]=%d\n", i, *(arr+i));//å› ç‚ºè¦å–ä½å€ï¼Œæ‰€ä»¥è¦æŠŠç›¸é—œçš„è®Šæ•¸æ‹¬å¥½
+    }
+
+    /* ç¬¬ä¸‰ç¨®è¡¨ç¤ºæ–¹æ³• */
+    printf("\nç¬¬ä¸‰ç¨®è¡¨ç¤ºæ–¹æ³•\n");
+    for (i = 0 ; i < 5 ; i++) {
+        printf("arr[%d]=%d\n", i, *(pointer+i));//é€™é‚Šçš„è©±ï¼Œå› ç‚ºpointerå·²ç¶“å°å‘arrçš„è¨˜æ†¶é«”ä½å€ï¼Œæ‰€ä»¥ç”¨æ³•è·Ÿä¸Šé¢ä¸€æ¨£
+    }
+    system("PAUSE");
+
+    return 0;
 }
+

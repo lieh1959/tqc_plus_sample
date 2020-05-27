@@ -1,27 +1,30 @@
+/* TQC+ C - 406 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 void change(int *, int *);
 
-int main ( ) 
+int main ( )
 {
-	int i=100, j=200;
-	printf("¥æ´««ei»Pjªº­È: \n");
-	printf("i=%d, j=%d\n", i, j);
-	
-	change(&i, &j);//¨ú¥X°O¾ĞÅé¦ì§}
-	printf("¥æ´««ái»Pjªº­È: \n");
-	printf("i=%d, j=%d\n", i, j);
-	
-	system("PAUSE");
-	return 0;
+    int i=100, j=200;
+
+    printf("äº¤æ›å‰ièˆ‡jçš„å€¼: \n");
+    printf("i=%d, j=%d\n", i, j);
+
+    change(&i, &j);//å–å‡ºè¨˜æ†¶é«”ä½å€
+    printf("äº¤æ›å¾Œièˆ‡jçš„å€¼: \n");
+    printf("i=%d, j=%d\n", i, j);
+    system("PAUSE");
+
+    return 0;
 }
 
-void change(int *x, int *y)//±µ¦¬¨ì°O¾ĞÅé¦ì§}
+void change(int *x, int *y)  /* æ¥æ”¶åˆ°è¨˜æ†¶é«”ä½å€ */
 {
-     	int temp;//³]©w¤@­Ó¾ã¼ÆÅÜ¼Æ
-     	temp=*x;//§â°O¾ĞÅé¤¤ªº¸ê®Æ¼g¶i¥h
-		
-     	*x=*y;//§âxªº¦ì§}§ï¦¨yªº
-     	*y=temp;//§â¼È¦sªºªF¦è¡A¼g¤Jy°O¾ĞÅé
-}
+      int temp; /* è¨­å®šä¸€å€‹æ•´æ•¸è®Šæ•¸ */
+
+      temp=*x; /* æŠŠè¨˜æ†¶é«”ä¸­çš„è³‡æ–™å¯«é€²å» */
+      *x=*y; /* æŠŠxçš„ä½å€æ”¹æˆyçš„ */
+      *y=temp; /* æŠŠæš«å­˜çš„æ±è¥¿ï¼Œå¯«å…¥yè¨˜æ†¶é«” */
+  }

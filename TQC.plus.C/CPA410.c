@@ -1,44 +1,47 @@
+/* TQC+ C - 410 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int Max(int *, int n, int m);
 
-int main ( ) 
+int main ( )
 {
-     int arr2[2][3];
-	 int *pointer = &arr2[0][0];
-	 int maximum, i, j;
-	
-	for (i=0; i<2; i++) {
-		  for (j=0; j<3; j++) {
-		      printf("½Ğ¿é¤Jarr[%d][%d]: ", i, j);
-		      scanf("%d", &arr2[i][j]);
-		  }
-	}
-	
-	printf("\n°}¦C¤§­È¦p¤U:\n");
-	for (i=0; i<2; i++) {
-		  for (j=0; j<3; j++) {
-		      printf("arr[%d][%d]=%d\n", i, j, arr2[i][j]);
-	}
-	}
- 	
-	maximum=Max(pointer, 2, 3);//¶È»İ­n¿é¤Jarr2¦]¬°¨ä¥»¨­´N¬°¤Gºû°}¦C
- 	printf("\n¦¹°}¦Cªº³Ì¤j­È¬°%d\n", maximum);
-	
-	system("PAUSE");
-	return 0;
+    int arr2[2][3];
+    int *pointer = &arr2[0][0];
+    int maximum, i, j;
+
+    for (i=0; i<2; i++) {
+        for (j=0; j<3; j++) {
+            printf("è«‹è¼¸å…¥arr[%d][%d]: ", i, j);
+            scanf("%d", &arr2[i][j]);
+        }
+    }
+
+    printf("\né™£åˆ—ä¹‹å€¼å¦‚ä¸‹:\n");
+    for (i=0; i<2; i++) {
+        for (j=0; j<3; j++) {
+            printf("arr[%d][%d]=%d\n", i, j, arr2[i][j]);
+        }
+    }
+
+    maximum=Max(pointer, 2, 3);
+    /* åƒ…éœ€è¦è¼¸å…¥arr2å› ç‚ºå…¶æœ¬èº«å°±ç‚ºäºŒç¶­é™£åˆ— */
+    printf("\næ­¤é™£åˆ—çš„æœ€å¤§å€¼ç‚º%d\n", maximum);
+    system("PAUSE");
+
+    return 0;
 }
 
 int Max(int *p, int x, int y)
 {
-    	int i, j, maxi_value=*p;//¥ı±N«ü¼Ğ©Ò«ü¨ìªº­È¨ú¥X
-    	for (i=1; i<(x*y); i++) {//°O¾ĞÅé¦ì¸mÁ`¦@¦³¤»®æ(2x3=6)
-		  if (maxi_value < *(p+i)) {
-			   maxi_value = *(p+i);
-		    }
- 		 
-	}
-	return maxi_value;
-}
+    int i, j, maxi_value=*p; /* å…ˆå°‡æŒ‡æ¨™æ‰€æŒ‡åˆ°çš„å€¼å–å‡º */
 
+    for (i=1; i<(x*y); i++) { /* è¨˜æ†¶é«”ä½ç½®ç¸½å…±æœ‰å…­æ ¼(2x3=6) */
+        if (maxi_value < *(p+i)) {
+            maxi_value = *(p+i);
+        }
+    }
+
+    return maxi_value;
+}

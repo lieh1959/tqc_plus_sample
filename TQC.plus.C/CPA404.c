@@ -1,41 +1,44 @@
+/* TQC+ C - 404 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-     int arr[2][3];
-	 int i, j;
- 	
-	for(i=0; i<2; i++) {
-		for (j=0; j<3; j++) {
-		      printf("½Ð¿é¤J°}¦Carr[%d][%d]¤¸¯À­È:", i, j);
-		      scanf("%d", &arr[i][j]);
-		}
-	}
-	
-	for (i=0; i<2; i++) {
-		for (j=0; j<3; j++) {
-		      printf("arr[%d][%d]=%d\n", i, j, arr[i][j]);
-		}
- 	}
-	
-	//¥t¤@ºØªí¥Ü¤èªk
-	printf("\n¥t¤@ºØªí¥Ü¤èªk\n");
-	for (i=0; i<2; i++) {
-		for (j=0; j<3; j++) {
-			printf("arr[%d][%d]=%d\n", i, j, *(arr[i]+j));
-			//±q«ü¼Ð(pointer)¤¤¨ú¥X­È(value)
-		}
-	}
-		
-	//²Ä¤TºØªí¥Ü¤èªk
-	printf("\n²Ä¤TºØªí¥Ü¤èªk\n");
-	for (i=0; i<2; i++) {
-		for (j=0; j<3; j++) {
-			printf("arr[%d][%d]=%d\n", i, j, *(*(arr+i)+j));//­n¨ú¥X­Èªº«ü¼Ð­n¬A¸¹¦n
-		}
-	}
-	
-	system("PAUSE");
-	return 0;
+   int arr[2][3];
+   int i, j;
+
+    for(i=0; i<2; i++) {
+        for (j=0; j<3; j++) {
+            printf("è«‹è¼¸å…¥é™£åˆ—arr[%d][%d]å…ƒç´ å€¼:", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    for (i=0; i<2; i++) {
+        for (j=0; j<3; j++) {
+            printf("arr[%d][%d]=%d\n", i, j, arr[i][j]);
+        }
+    }
+
+    /* å¦ä¸€ç¨®è¡¨ç¤ºæ–¹æ³• */
+    printf("\nå¦ä¸€ç¨®è¡¨ç¤ºæ–¹æ³•\n");
+    for (i=0; i<2; i++) {
+        for (j=0; j<3; j++) {
+            printf("arr[%d][%d]=%d\n", i, j, *(arr[i]+j));
+            /* å¾žæŒ‡æ¨™(pointer)ä¸­å–å‡ºå€¼(value) */
+        }
+    }
+
+    /* ç¬¬ä¸‰ç¨®è¡¨ç¤ºæ–¹æ³• */
+    printf("\nç¬¬ä¸‰ç¨®è¡¨ç¤ºæ–¹æ³•\n");
+    for (i=0; i<2; i++) {
+        for (j=0; j<3; j++) {
+            printf("arr[%d][%d]=%d\n", i, j, *(*(arr+i)+j));
+            /* è¦å–å‡ºå€¼çš„æŒ‡æ¨™è¦æ‹¬è™Ÿå¥½ */
+        }
+    }
+    system("PAUSE");
+
+    return 0;
 }
