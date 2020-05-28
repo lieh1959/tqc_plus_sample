@@ -1,29 +1,35 @@
-struct circle {
-	int x, y;
-	double radius;
-};
-
-double callarea(struct circle *pr);
+/* TQC+ C - 506 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
-{	
-	double area;
-	struct circle c1={10, 10, 8.5};
- 	
-	area = callarea(&c1);//¸É¤W&°Ñ·Ó
-	
-	printf("¦¹¶êªº¶ê¤ß¬°(%d,¡@%d), ¥b®|¬°%.2f, ­±¿n¬°%.2f\n", 
-                c1.x, c1.y, c1.radius, area);//radius¬O«Å§i¦bcallarea¸Ì­±ªº©Ò¥H¥²¶·±q¸Ì­±©I¥s
-	system("PAUSE");
-     return 0;
+struct circle {
+    int x, y;
+    double radius;
+};
+
+double callarea(struct circle *pr);
+
+int main ()
+{
+    double area;
+    struct circle c1={10, 10, 8.5};
+
+    area = callarea(&c1);  /* è£œä¸Š&åƒç…§ */
+
+    printf("æ­¤åœ“çš„åœ“å¿ƒç‚º(%d,ã€€%d), åŠå¾‘ç‚º%.2f, é¢ç©ç‚º%.2f\n",
+            c1.x, c1.y, c1.radius, area);
+    /* radiusæ˜¯å®£å‘Šåœ¨callareaè£¡é¢çš„æ‰€ä»¥å¿…é ˆå¾žè£¡é¢å‘¼å« */
+    system("PAUSE");
+
+    return 0;
 }
 
-double callarea(struct circle *pr)//«Å§iªº§ÎºA­n¤@­P¡A§ï¦¨double
+double callarea(struct circle *pr)  /* å®£å‘Šçš„å½¢æ…‹è¦ä¸€è‡´ï¼Œæ”¹æˆdouble */
 {
-	double area;//¤@¨Ö§ï¦¨double
-	area = pr->radius * pr->radius * 3.14159;
-	return area;
+    double area;//ä¸€ä½µæ”¹æˆdouble
+
+    area = pr->radius * pr->radius * 3.14159;
+
+    return area;
 }

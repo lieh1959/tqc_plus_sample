@@ -1,19 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
     struct  circle {
-		int x, y;
-		double radius;
-	};//°P§iªº«Å§i«á­±­n¦³¤À¸¹
-	
-	double area;
-	struct circle c1={10, 10, 2.5};
-   
-	area = c1.radius*c1.radius*3.14159;//¸É¤Wµ²ºcªº«Å§ic1.???
-	
-	printf("¦¹¶êªº¶ê¤ß¬°(%d, %d), ­±¿n¬°%.2f\n", c1.x, c1.y, area);
-	system("PAUSE");
+        int x, y;
+        double radius;
+    };  /* çµæ§‹çš„å®£å‘Šå¾Œé¢è¦æœ‰åˆ†è™Ÿ */
+
+    double area;
+    struct circle c1={10, 10, 2.5};
+
+    area = c1.radius * c1.radius * 3.14159;
+    /* è£œä¸Šçµæ§‹çš„å®£å‘Šc1.??? */
+
+    printf("æ­¤åœ“çš„åœ“å¿ƒç‚º(%d, %d), é¢ç©ç‚º%.2f\n", c1.x, c1.y, area);
+    system("PAUSE");
+
     return 0;
 }

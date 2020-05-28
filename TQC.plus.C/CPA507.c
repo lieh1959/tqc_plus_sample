@@ -1,32 +1,37 @@
+/* TQC+ C - 507 */
+
 #include <stdio.h>
 #include <stdlib.h>
-//struct«Å§iµ§ªÌ²ßºD¦bint main()¥~­±
-struct  company {
-	char name[10];
-	int hour;
-	double pay;
- 	};
 
-int main () 
+struct  company {
+    char name[10];
+    int hour;
+    double pay;
+};
+
+int main ()
 {
-	//³z¹Lµ²ºc«Å§i
-	struct company employee[5]={//¦b³oÃä¡A¦]¬°ºû¤­­Ó¤¸¯Àªº°}¦C¡A©Ò¥H¬A¸¹­n¤À°t¦n
-		{"John", 20, 100.34},
-		{"Mary", 30, 99.78},
-		{"Peter", 25, 89.45}, 
-		{"Nancy", 33, 87.42},
-		{"Tom", 54, 77.89}
-	};
-	
-	double salary[5];
-	int i;
-	for(i=0; i<5; i++)//§ïÅÜÅÞ¿è¡A§PÂ_¦¡¶È»Ý­n¤p©ó5
-	{
-	salary[i]=employee[i].hour*employee[i].pay;//°}¦Cªº¤¤ªºindex§ï¦¨°ÊºAªºi
-	printf("%-10s ªºÁ~¤ô¬°¡@%.2f\n", 
-                employee[i].name,salary[i]);//salary[i]¤£ÄÝ©ócompanyµ²ºcªº¶µ¥Ø¡A©Ò¥H¤£¥Î³z¹Lµ²ºc¤è¦¡¨Ó©I¥s
-	}
- 	
-	system("PAUSE");
-     return 0;
+    double salary[5];
+    int i;
+
+    /* é€éŽçµæ§‹åœ¨å®£å‘Šæ™‚ï¼Œä¸é ˆåŠ ä¸Šstructå­—æ¨£ */
+    company employee[5]={
+        /* åœ¨é€™é‚Šï¼Œå› ç‚ºæœ‰äº”å€‹å…ƒç´ çš„é™£åˆ—ï¼Œæ‰€ä»¥æ‹¬è™Ÿè¦åˆ†é…å¥½ */
+        {"John", 20, 100.34},
+        {"Mary", 30, 99.78},
+        {"Peter", 25, 89.45},
+        {"Nancy", 33, 87.42},
+        {"Tom", 54, 77.89}
+    };
+
+    for(i = 0; i < 5; i++){
+        /* æ”¹è®Šé‚è¼¯ï¼Œåˆ¤æ–·å¼åƒ…éœ€è¦å°æ–¼5 */
+        salary[i] = employee[i].hour*employee[i].pay;
+        /* é™£åˆ—çš„ä¸­çš„indexæ”¹æˆå‹•æ…‹çš„i */
+        printf("%-10s çš„è–ªæ°´ç‚ºã€€%.2f\n", employee[i].name,salary[i]);
+        /* salary[i]ä¸å±¬æ–¼companyçµæ§‹çš„é …ç›®ï¼Œæ‰€ä»¥ä¸ç”¨é€éŽçµæ§‹æ–¹å¼ä¾†å‘¼å« */
+    }
+    system("PAUSE");
+
+    return 0;
 }

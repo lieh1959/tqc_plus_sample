@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-   struct  student {
-		char name[10];
-		int score;
-	};//«Å§iµ²ºc«á­n¤À¸¹
-	
-	struct student st1;
-	printf("½Ğ¿é¤J©m¦W:");
-	scanf("%s", &st1.name);//name¬O«Å§i¦bstudentªºµ²ºc¤º¡A©Ò¥H¥²¶·©I¥s
-    
-	printf("½Ğ¿é¤J¤À¼Æ:");
-	scanf("%d", &st1.score);
-	
-	printf("%sªº¦¨ÁZ¬O%d\n", st1.name, st1.score);
-	
-	if (st1.score > 60)
-      printf("®¥³ß±z³q¹L¤F");
-	else {
-      printf("©êºp±z³Q·í¤F");
-	}
+    struct  student {
+        char name[10];
+        int score;
+    };  /* å®£å‘Šçµæ§‹å¾Œè¦åˆ†è™Ÿ */
 
-	system("PAUSE");
-   return 0;
+    struct student st1;
+    printf("è«‹è¼¸å…¥å§“å:");
+    scanf("%s", &st1.name);
+    /* nameæ˜¯å®£å‘Šåœ¨studentçš„çµæ§‹å…§ï¼Œæ‰€ä»¥å¿…é ˆå‘¼å« */
+
+    printf("è«‹è¼¸å…¥åˆ†æ•¸:");
+    scanf("%d", &st1.score);
+
+    printf("%sçš„æˆç¸¾æ˜¯%d\n", st1.name, st1.score);
+
+    if (st1.score > 60)
+        printf("æ­å–œæ‚¨é€šéäº†");
+    else
+        printf("æŠ±æ­‰æ‚¨è¢«ç•¶äº†");
+    system("PAUSE");
+
+    return 0;
 }

@@ -1,27 +1,32 @@
-struct rect {
-	int length, width;
-};
-
-int callarea(struct rect *pr);
+/* TQC+ C - 505 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
-{	
-	int area;
-	struct rect r1={20, 18};
- 	
-	area = callarea(&r1);//¸É¤W&ªº°Ñ·Ó
-	
-	printf("¦¹¯x§Îªºªø¬°%d, ¼e¬°%d, ­±¿n¬°%d\n", r1.length, r1.width, area);
-	system("PAUSE");
-     return 0;
+int callarea(struct rect *pr);
+
+struct rect {
+    int length, width;
+};
+
+int main ()
+{
+    int area;
+    struct rect r1={20, 18};
+
+    area = callarea(&r1); /* è£œä¸Š&çš„åƒç…§ */
+
+    printf("æ­¤çŸ©å½¢çš„é•·ç‚º%d, å¯¬ç‚º%d, é¢ç©ç‚º%d\n", r1.length, r1.width, area);
+    system("PAUSE");
+
+    return 0;
 }
 
 int callarea(struct rect *pr)
 {
-	int area;
-	area = pr->length * pr->width;//§â­ì¥»ªº.§ï¦¨->¡A¦]¬°³oÃä¬O«ü¼Ğ«ü¦Vªº
-	return area;
+    int area;
+
+    area = pr->length * pr->width;//æŠŠåŸæœ¬çš„.æ”¹æˆ->ï¼Œå› ç‚ºé€™é‚Šæ˜¯æŒ‡æ¨™æŒ‡å‘çš„
+
+    return area;
 }

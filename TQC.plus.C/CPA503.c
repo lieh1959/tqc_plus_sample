@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-   struct  circle {
-		int x, y;
-		double radius;
-	};
-	
-	double area;
-	struct circle c1={10, 10, 2.5};
-	struct circle *pc=&c1;//³oÃä¤w¸g³z¹L«ü¼Ğ±Npc«ü¦Vc1¤F
-	
-	area = (*pc).radius*(*pc).radius*3.14159;//¦¹®É¡A§Ú­Ì¥²¶·³z¹L¬A¸¹¡A¥ı¥Î(*pc)±Nªºµ²ºc¨ú¥X¡A¦A©I¥s¸Ì­±ªº¶µ¥Ø
-	//¦pªG¨Ï¥Î*pc.radius¦³ÂI·N¨ı*(pc.radius)¡A¦ı³o¼Ë¨ú¤£¥X¨Ó	
-	printf("¦¹¶êªº¶ê¤ß¬°(%d, %d), ­±¿n¬°%.2f\n", (*pc).x, (*pc).y, area);
-	system("PAUSE");
-	return 0;
+    struct  circle {
+    int x, y;
+    double radius;
+    };
+
+    double area;
+    struct circle c1={10, 10, 2.5};
+    struct circle *pc=&c1; /* é€™é‚Šå·²ç¶“é€éæŒ‡æ¨™å°‡pcæŒ‡å‘c1äº† */
+
+    area = (*pc).radius * (*pc).radius * 3.14159;
+    /* æ­¤æ™‚ï¼Œæˆ‘å€‘å¿…é ˆé€éæ‹¬è™Ÿï¼Œå…ˆç”¨(*pc)å°‡çš„çµæ§‹å–å‡ºï¼Œå†å‘¼å«è£¡é¢çš„é …ç›®
+     * å¦‚æœä½¿ç”¨*pc.radiusæœ‰é»æ„å‘³*(pc.radius)ï¼Œä½†é€™æ¨£å–ä¸å‡ºä¾†
+     */
+    printf("æ­¤åœ“çš„åœ“å¿ƒç‚º(%d, %d), é¢ç©ç‚º%.2f\n", (*pc).x, (*pc).y, area);
+    system("PAUSE");
+
+    return 0;
 }

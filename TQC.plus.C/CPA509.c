@@ -1,34 +1,35 @@
+/* TQC+ C - 509 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-    struct  triangle {
-		int width;
-		int height;
-  	};
+struct  triangle {
+  int width;
+  int height;
+};
 
-int main () 
+int main ()
 {
+    triangle *ptri;
+    /* å®£å‘Šä¸€å€‹triangleçš„æŒ‡æ¨™ */
+    double area;
 
-	
-	triangle *ptri;//«Å§i¤@­Ótriangleªº«ü¼Ğ 	
-	
-	double area;
- 	
-	ptri=(triangle*) malloc(sizeof(triangle));//¸ò¹q¸£­n°O¾ĞÅéªÅ¶¡
-	//malloc()¥Î¨Ó¸ò¹q¸£­n°O¾ĞÅéªÅ¶¡ªº¨ç¼Æ
-	//¦ı¬O¦]¬°¹w³]¦^¶Ç«¬ºA¬Ovoid
-	//©Ò¥H§Ú­Ì¥²¶·¦Û¦æ³]©w¨ä¦^¶Çªº«¬ºA(triangle*) 
-	//§O¬İ¨ì(triangle*)Ä±±o¤£²ßºD¡A¥¦¤]¬O¤@ºØ«¬ºA
-	//¨Ò¦p¡G¥­±`¬O³o¼Ë«Å§iªºint *p¡A¨ä¹ê³o¸òint* p·N«ä¬O¤@¼Ëªº
+    ptri=(triangle*) malloc(sizeof(triangle));
+    /* è·Ÿç³»çµ±è¦è¨˜æ†¶é«”ç©ºé–“
+     * malloc()ç”¨ä¾†è·Ÿç³»çµ±è¦è¨˜æ†¶é«”ç©ºé–“çš„å‡½æ•¸
+     * ä½†æ˜¯å› ç‚ºé è¨­å›å‚³å‹æ…‹æ˜¯void*
+     * æ‰€ä»¥æˆ‘å€‘å¿…é ˆè‡ªè¡Œè¨­å®šå…¶å›å‚³çš„å‹æ…‹(triangle*)
+     * åˆ¥çœ‹åˆ°(triangle*)è¦ºå¾—ä¸ç¿’æ…£ï¼Œå®ƒä¹Ÿæ˜¯ä¸€ç¨®å‹æ…‹
+     * ä¾‹å¦‚ï¼šå¹³å¸¸æ˜¯é€™æ¨£å®£å‘Šçš„int *pï¼Œå…¶å¯¦é€™è·Ÿint* pæ„æ€æ˜¯ä¸€æ¨£çš„
+     */
 
-	printf("½Ğ¿é¤J¤T¨¤§Îªº©³¬°¦h¤Ö: ");
-	scanf("%d", &ptri->width);//ptri¬O«ü¼Ğ¡A­n©I¥s¸Ì­±ªº¶µ¥Ø¥²¶·¥Î->
-	printf("½Ğ¿é¤J¤T¨¤§Îªº°ª¬°¦h¤Ö: ");
-	scanf("%d", &ptri->height);
- 
-	area = (ptri->width * ptri->height)/2.;
- 	printf("¤T¨¤§Îªº­±¿n¬°%.2f\n", area);
- 	
-	system("PAUSE");
-     return 0;
+    printf("è«‹è¼¸å…¥ä¸‰è§’å½¢çš„åº•ç‚ºå¤šå°‘: ");
+    scanf("%d", &ptri->width);  /* ptriæ˜¯æŒ‡æ¨™ï¼Œè¦å‘¼å«è£¡é¢çš„é …ç›®å¿…é ˆç”¨-> */
+    printf("è«‹è¼¸å…¥ä¸‰è§’å½¢çš„é«˜ç‚ºå¤šå°‘: ");
+    scanf("%d", &ptri->height);
+    area = (ptri->width * ptri->height)/2.;
+    printf("ä¸‰è§’å½¢çš„é¢ç©ç‚º%.2f\n", area);
+    system("PAUSE");
+
+    return 0;
 }

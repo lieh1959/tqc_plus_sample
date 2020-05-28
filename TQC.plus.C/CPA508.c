@@ -1,38 +1,36 @@
+/* TQC+ C - 508 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-//struct«Å§iµ§ªÌ²ßºD¦bint main()¥~­±
 struct  company {
-	char name[10];
-	int hour;
-	double pay;
- 	};
+    char name[10];
+    int hour;
+    double pay;
+};
 
-
-int main () 
+int main ()
 {
-	company employee[5];	
-	double salary[5];
-	int i;
-	
-	for (i=0; i<5; i++) 
-	{
-		  printf("½Ð¿é¤J²Ä%d¦ì­û¤uªº©m¦W: ", i+1);
-		  scanf("%s", &employee[i].name);//¸É¤W&°Ñ·Ó
-		  printf("½Ð¿é¤J²Ä%d¦ì­û¤uªº¤u§@®É¼Æ: ", i+1);
-		  scanf("%d", &employee[i].hour);//¸É¤W&°Ñ·Ó
-		  printf("½Ð¿é¤J²Ä%d¦ì­û¤u¤@¤p®Éªº¤u¸ê: ", i+1);
-		  scanf("%lf", &employee[i].pay);//¸É¤W&°Ñ·Ó¡A¨Ã¥B§ï¦¨%lf¦]¬°­n¿é¤Jªº¬Odouble
-	}
-	
-	for(i=0; i<5; i++)
-	{
-		  salary[i]=employee[i].hour*employee[i].pay;
-		  printf("%-10s ªºÁ~¤ô¬°¡@%.2f\n", 
-               employee[i].name, salary[i]);//salary[i]¤£ÄÝ©óµ²ºccompanyªº¶µ¥Ø
-	}
+   company employee[5];
+   double salary[5];
+   int i;
 
-	system("PAUSE");
-     return 0;
+   for (i = 0 ; i < 5 ; i++) {
+        printf("è«‹è¼¸å…¥ç¬¬%dä½å“¡å·¥çš„å§“å: ", i+1);
+        scanf("%s", &employee[i].name); /* è£œä¸Š&åƒç…§ */
+        printf("è«‹è¼¸å…¥ç¬¬%dä½å“¡å·¥çš„å·¥ä½œæ™‚æ•¸: ", i+1);
+        scanf("%d", &employee[i].hour); /* è£œä¸Š&åƒç…§ */
+        printf("è«‹è¼¸å…¥ç¬¬%dä½å“¡å·¥ä¸€å°æ™‚çš„å·¥è³‡: ", i+1);
+        scanf("%lf", &employee[i].pay);
+        /* è£œä¸Š&åƒç…§ï¼Œä¸¦ä¸”æ”¹æˆ%lfå› ç‚ºè¦è¼¸å…¥çš„æ˜¯double */
+    }
+
+    for(i = 0 ; i < 5 ; i++) {
+        salary[i]=employee[i].hour*employee[i].pay;
+        printf("%-10s çš„è–ªæ°´ç‚ºã€€%.2f\n", employee[i].name, salary[i]);
+        /* salary[i]ä¸å±¬æ–¼çµæ§‹companyçš„é …ç›® */
+    }
+    system("PAUSE");
+
+    return 0;
 }
-
