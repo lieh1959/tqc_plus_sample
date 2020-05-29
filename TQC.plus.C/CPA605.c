@@ -1,31 +1,36 @@
+/* TQC+ C - 605 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 
-int main () 
+int main ()
 {
- 	char ch, ch2;
-	printf("½Ğ¿é¤J¤@¤p¼gªº­^¤å¦r¥À: ");
-	scanf("%c", &ch);//¸É¤W&ªº°Ñ·Ó
-	
-	//±N¤U¦Cªº¦r¤¸Âà¬°¤j¼g
-	ch2=toupper(ch);
-	printf("%cªº¤j¼g¬O%c", ch, ch2);
-	
-	
-	 while (getchar() != '\n') {
-		 //³oÃä¥D­n¬O­n±N¨Ï¥ÎªÌ¦h¿é¤JªºªF¦è±q½w½Ä°Ï®ø¯Ó±¼
-		 //¦pªG¨S¦³³o¤@Ãäªº¸Ü¡A¤U¦¸¦A¤@¦¸¨Ï¥Îgetchar()¡Bscanf()«h·|±q½w½Ä°ÏÅª¨ú©|¥¼¥Î§¹ªº¦r
-	     continue;
-	 }
-	 
-	
- 	//±N¤U¦Cªº¦r¤¸Âà¬°¤p¼g
-	printf("\n½Ğ¿é¤J¤@¤j¼gªº­^¤å¦r¥À: ");
-	scanf("%c", &ch);//¸É¤W&ªº°Ñ·Ó
-	ch2=tolower(ch);
-	printf("%cªº¤p¼g¬O%c", ch, ch2);
-	
-	system("PAUSE");
-	return 0;
+    char ch, ch2;
+
+    printf("è«‹è¼¸å…¥ä¸€å°å¯«çš„è‹±æ–‡å­—æ¯: ");
+    scanf("%c", &ch);  /* è£œä¸Š&çš„åƒç…§ */
+
+    /* å°‡ä¸‹åˆ—çš„å­—å…ƒè½‰ç‚ºå¤§å¯« */
+    ch2 = toupper(ch);
+    printf("%cçš„å¤§å¯«æ˜¯%c", ch, ch2);
+
+
+    while (getchar() != '\n') {
+        /* é€™é‚Šä¸»è¦æ˜¯è¦å°‡ä½¿ç”¨è€…å¤šè¼¸å…¥çš„æ±è¥¿å¾ç·©è¡å€æ¶ˆè€—æ‰
+         * å¦‚æœæ²’æœ‰é€™ä¸€é‚Šçš„è©±ï¼Œ
+         * ä¸‹æ¬¡å†ä¸€æ¬¡ä½¿ç”¨getchar()ã€scanf()
+         * å‰‡æœƒå¾ç·©è¡å€è®€å–å°šæœªç”¨å®Œçš„å­—
+         */
+        continue;
+    }
+
+    /* å°‡ä¸‹åˆ—çš„å­—å…ƒè½‰ç‚ºå°å¯« */
+    printf("\nè«‹è¼¸å…¥ä¸€å¤§å¯«çš„è‹±æ–‡å­—æ¯: ");
+    scanf("%c", &ch); /* è£œä¸Š&çš„åƒç…§ */
+    ch2 = tolower(ch);
+    printf("%cçš„å°å¯«æ˜¯%c", ch, ch2);
+    system("PAUSE");
+
+    return 0;
 }

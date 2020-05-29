@@ -1,22 +1,22 @@
+/* TQC+ C - 607 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-    char str[20];//¸É¤W°}¦C¤j¤p
-	char *pstr;
- 	printf("½Ğ¿é¤Jstr¦r¦ê: ");
-	scanf("%s", str);
-	
-	printf("½Ğ¿é¤Jpstr¦r¦ê: ");
-	pstr=(char *)malloc(sizeof(char)*20);//°ÊºA°O¾ĞÅé°t¸m¡AµM«á¸É¤W¤j¤p
-	
-	scanf("%s", pstr);
-	printf("\n±z¿é¤Jstr¦r¦ê¦p¤U: %s\n", str);
-	printf("±z¿é¤Jpstr¦r¦ê¦p¤U: %s\n", pstr);
+    char str[20];/* è£œä¸Šé™£åˆ—å¤§å° */
+    char *pstr;
+
+    printf("è«‹è¼¸å…¥strå­—ä¸²: ");
+    scanf("%s", str);
+
+    printf("è«‹è¼¸å…¥pstrå­—ä¸²: ");
+    pstr=(char *)malloc(sizeof(char)*20); /* å‹•æ…‹è¨˜æ†¶é«”é…ç½®ï¼Œç„¶å¾Œè£œä¸Šå¤§å° */
+    scanf("%s", pstr);
+    printf("\næ‚¨è¼¸å…¥strå­—ä¸²å¦‚ä¸‹: %s\n", str);
+    printf("æ‚¨è¼¸å…¥pstrå­—ä¸²å¦‚ä¸‹: %s\n", pstr);
     system("PAUSE");
+
     return 0;
 }
- 
-
-  

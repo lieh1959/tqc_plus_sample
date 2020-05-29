@@ -1,44 +1,49 @@
+/* TQC+ C - 606 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-    FILE *fptr;//«Å§iÀÉ®×ªº«ü¼Ğ
- 	char ch;
-	fptr=fopen("character.dat", "w");
-	//¶}±Ò¤@­ÓÀÉ®×¡A·íÀÉ®×¤£¦s¦b®É¡A·|³Ğ«Ø¤@­Ó¡A¨Ã¥B³]©w¼Ò¦¡¡A"w"¼g¤Jªº·N«ä
- 	printf("½Ğ¿é¤J¤@¦r¤¸: ");
-	scanf("%c", &ch);
-	
-	//±N¤@¦æ¦h¾lªº¦r¤¸¥á±¼
-	while (getchar() != '\n') {
-	continue;
-	}
-	
-	//·íÅª¨ú¨ì*´N°±¤î
-	while (ch != '*') {
-	fprintf(fptr,"%c",ch);//fprintf(ÀÉ®×«ü¼Ğ,¦L¤J®æ¦¡,¨Ó·½);
-	//¦L¨ìÀÉ®×ùØ­±¡A¥­±`ªºprintf¦¡¦L¨ì»È¹õµ¹§Ú­Ì¬İ¡A²{¦b¬O¦L¨ìÀÉ®×¤¤
- 	printf("½Ğ¿é¤J¤@¦r¤¸: ");
-	scanf("%c", &ch);
-	//±N¤@¦æ¦h¾lªº¦r¤¸¥á±¼
-	while (getchar() != '\n') {
-	continue;
-	}	
-	}
-	
-     fclose(fptr);//Ãö³¬ÀÉ®×
-	
-	fptr=fopen("character.dat", "r");
-	//¶}±Ò¤@­ÓÀÉ®×¡A¨Ã¥B³]©w¼Ò¦¡¡A"r"¦¡Åª¨úªº·N«ä
-	printf("\n¥H¤U¬O±z¿é¤Jªº¸ê®Æ:\n");
-	while (fscanf(fptr,"%c", &ch) != EOF) //EOF=End Of File
-		//³oÃäªº§PÂ_¦¡·N«ä¬O¦pªG¨S¦³Åª¨ìÀÉ®×§À¤Ú¡A´N«ùÄòÅª¨úÀÉ®×
-			//¥Îªk¸òscanf¤@¼Ë¡A¶È®t¦b¦h¤@­ÓÀÉ®×ªº«ü¼Ğ
-	{
-	printf("%3c\n", ch);
-	}
-	system("PAUSE");
-	return 0;
-}
+    FILE *fptr;/* å®£å‘Šæª”æ¡ˆçš„æŒ‡æ¨™ */
+    char ch;
 
+    fptr=fopen("character.dat", "w");
+    /* é–‹å•Ÿä¸€å€‹æª”æ¡ˆï¼Œç•¶æª”æ¡ˆä¸å­˜åœ¨æ™‚ï¼Œæœƒå‰µå»ºä¸€å€‹ï¼Œä¸¦ä¸”è¨­å®šæ¨¡å¼ï¼Œ"w"å¯«å…¥çš„æ„æ€ */
+    printf("è«‹è¼¸å…¥ä¸€å­—å…ƒ: ");
+    scanf("%c", &ch);
+
+    /* å°‡ä¸€è¡Œå¤šé¤˜çš„å­—å…ƒä¸Ÿæ‰ */
+    while (getchar() != '\n') {
+        continue;
+    }
+
+    /* ç•¶è®€å–åˆ°*å°±åœæ­¢ */
+    while (ch != '*') {
+        fprintf(fptr,"%c",ch);  /* fprintf(æª”æ¡ˆæŒ‡æ¨™,å°å…¥æ ¼å¼,ä¾†æº); */
+        /* å°åˆ°æª”æ¡ˆè£é¢ï¼Œå¹³å¸¸çš„printfå¼å°åˆ°éŠ€å¹•çµ¦æˆ‘å€‘çœ‹ï¼Œç¾åœ¨æ˜¯å°åˆ°æª”æ¡ˆä¸­ */
+        printf("è«‹è¼¸å…¥ä¸€å­—å…ƒ: ");
+        scanf("%c", &ch);
+        /* å°‡ä¸€è¡Œå¤šé¤˜çš„å­—å…ƒä¸Ÿæ‰ */
+        while (getchar() != '\n') {
+            continue;
+        }
+    }
+    fclose(fptr);  /* é—œé–‰æª”æ¡ˆ */
+    fptr=fopen("character.dat", "r");
+
+    /* é–‹å•Ÿä¸€å€‹æª”æ¡ˆï¼Œä¸¦ä¸”è¨­å®šæ¨¡å¼ï¼Œ"r"å¼è®€å–çš„æ„æ€ */
+    printf("\nä»¥ä¸‹æ˜¯æ‚¨è¼¸å…¥çš„è³‡æ–™:\n");
+
+    while (fscanf(fptr,"%c", &ch) != EOF)
+    /* EOF : End Of File
+     * é€™é‚Šçš„åˆ¤æ–·å¼æ„æ€æ˜¯å¦‚æœæ²’æœ‰è®€åˆ°æª”æ¡ˆå°¾å·´ï¼Œå°±æŒçºŒè®€å–æª”æ¡ˆ
+     * ç”¨æ³•è·Ÿscanfä¸€æ¨£ï¼Œåƒ…å·®åœ¨å¤šä¸€å€‹æª”æ¡ˆçš„æŒ‡æ¨™
+     */
+    {
+        printf("%3c\n", ch);
+    }
+    system("PAUSE");
+
+    return 0;
+}

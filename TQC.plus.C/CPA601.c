@@ -1,18 +1,23 @@
+/* TQC+ C - 601 */
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>//¦]¬°­n¨Ï¥Î¨ì¦r¦êªº²[¦¡®w¡A»İ­ninclude <string.h>
+#include <string.h>  /* å› ç‚ºè¦ä½¿ç”¨åˆ°å­—ä¸²çš„æ¶µå¼åº«ï¼Œéœ€è¦include <string.h> */
 
-int main () 
+int main ()
 {
-     char str[]="Apple iPhone 4";
-	char pstr2[20]="Apple";
-	char pstr1[]=" iPod";
-	char str3[20];
-	
-	printf("str¦r¦êªºªø«×¬O%d\n", strlen(str));//½Ğª`·N¨ç¼Æ¦WºÙ­n¥¿½T¡Astrlen()¥Î¨Ó¨ú±o¦r¦êªø«×
-	printf("pstr2³sµ²pstr1«áªº¦r¦ê¬°:%s\n", strcat(pstr2, pstr1));//½Ğª`·N¨ç¼Æ¦WºÙ­n¥¿½T¡Astrcat()±N«á­±ªº¦r¦ê¦ê¦b«e­±ªº¦r¦ê«á
-	printf("str3¦r¦ê¦p¤U:%s\n", strcpy(str3, pstr1));//½Ğª`·N¨ç¼Æ¦WºÙ­n¥¿½T¡Astrcpy(str3, pstr1)¡A±N«á­±ªº¦r¦ê½Æ»s¨ì«e­±ªº¦r¦ê
-	
-	system("PAUSE");
-	return 0;
+    char str[]="Apple iPhone 4";
+    char pstr2[20]="Apple";
+    char pstr1[]=" iPod";
+    char str3[20];
+
+    printf("strå­—ä¸²çš„é•·åº¦æ˜¯%d\n", strlen(str));
+    /* è«‹æ³¨æ„å‡½æ•¸åç¨±è¦æ­£ç¢ºï¼Œstrlen()ç”¨ä¾†å–å¾—å­—ä¸²é•·åº¦ */
+    printf("pstr2é€£çµpstr1å¾Œçš„å­—ä¸²ç‚º:%s\n", strcat(pstr2, pstr1));
+    /* è«‹æ³¨æ„å‡½æ•¸åç¨±è¦æ­£ç¢ºï¼Œstrcat()å°‡å¾Œé¢çš„å­—ä¸²ä¸²åœ¨å‰é¢çš„å­—ä¸²å¾Œ */
+    printf("str3å­—ä¸²å¦‚ä¸‹:%s\n", strcpy(str3, pstr1));
+    /* è«‹æ³¨æ„å‡½æ•¸åç¨±è¦æ­£ç¢ºï¼Œstrcpy(str3, pstr1)ï¼Œå°‡å¾Œé¢çš„å­—ä¸²è¤‡è£½åˆ°å‰é¢çš„å­—ä¸² */
+    system("PAUSE");
+
+    return 0;
 }

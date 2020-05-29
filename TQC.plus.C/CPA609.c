@@ -1,20 +1,26 @@
+/* TQC+ C - 609 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int main () 
+int main ()
 {
- 	char str1[40]="iPhone 4";
- 	char str2[40]="Apple iPod";
+    char str1[40]="iPhone 4";
+    char str2[40]="Apple iPod";
     char str3[40]="Apple ";
-	char str4[40];
-		
-	strncat(str3, str1, 6);
-	strncpy(str4, str2+6, 5);//Åıstr2°}¦C±q²Ä¤»­Ó¦r«á¶}©lÅª¡AµM«áÁöµMiPod¥u¦³¥|­Ó¦r¡A¦ı¬O¦]¬°¦r¦êµ²§À¦³\0¡A©Ò¥H­n¤@¨ÖÅª¶i¨Ó
-	
- 	printf("%s\n", str3);
-  	printf("%s\n", str4);
+    char str4[40];
 
-	system("PAUSE");
-	return 0;
+    strncat(str3, str1, 6);
+    strncpy(str4, str2+6, 5);
+    /* è®“str2é™£åˆ—å¾ç¬¬å…­å€‹å­—å¾Œé–‹å§‹è®€ï¼Œ
+     * ç„¶å¾Œé›–ç„¶iPodåªæœ‰å››å€‹å­—ï¼Œ
+     * ä½†æ˜¯å› ç‚ºå­—ä¸²çµå°¾æœ‰\0ï¼Œ
+     * æ‰€ä»¥è¦ä¸€ä½µè®€é€²ä¾†
+     */
+    printf("%s\n", str3);
+    printf("%s\n", str4);
+    system("PAUSE");
+
+    return 0;
 }

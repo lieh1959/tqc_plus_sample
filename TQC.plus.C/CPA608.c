@@ -1,16 +1,22 @@
+/* TQC+ C - 608 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-     char str[]="Apple iPhone 4";//½Ğ§R°£ªì©lªºªø«×³]©w¡A¤£µM´N³]©w¤ñ¦r¦êªøªºªø«×
-	char sttr[]={'i', 'P', 'a', 'd','\0'};//¦]¬°­n¿é¥X¦r¦ê¡A¦r¦êªºµ²§À¬O¥H'\0'§@¬°µ²§À
-	char *pstr="Apple iPod";
-  
-	printf("str¦r¦ê¦p¤U: %s\n", str);
-	printf("sttr¦r¦ê¦p¤U: %s",sttr);
+    char str[]="Apple iPhone 4";
+    /* è«‹åˆªé™¤åˆå§‹çš„é•·åº¦è¨­å®šï¼Œä¸ç„¶å°±è¨­å®šæ¯”å­—ä¸²é•·çš„é•·åº¦ */
+    char sttr[]={'i', 'P', 'a', 'd','\0'};
+    /* å› ç‚ºè¦è¼¸å‡ºå­—ä¸²ï¼Œå­—ä¸²çš„çµå°¾æ˜¯ä»¥'\0'ä½œç‚ºçµå°¾ */
+    char *pstr="Apple iPod";
 
-     printf("\npstr¦r¦ê¦p¤U: %s\n", pstr);//¸É¤W¤@­Ó´«¦æ²Å¸¹
-	system("PAUSE");
-     return 0;
-}
+    printf("strå­—ä¸²å¦‚ä¸‹: %s\n", str);
+    printf("sttrå­—ä¸²å¦‚ä¸‹: %s",sttr);
+
+    printf("\npstrå­—ä¸²å¦‚ä¸‹: %s\n", pstr);
+    /* è£œä¸Šä¸€å€‹æ›è¡Œç¬¦è™Ÿ */
+    system("PAUSE");
+
+    return 0;
+ }

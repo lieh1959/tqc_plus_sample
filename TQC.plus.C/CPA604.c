@@ -1,24 +1,27 @@
+/* TQC+ C - 604 */
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>//³oÃä¦³¥Î¨ìgetche()ªº¥\¯à¡A©Ò¥H¥²¶·include <conio.h>
-#include <ctype.h>//­^¤å¦r¤¸¶¡ªºÂà´«»İ­ninclude<ctype.h>
+#include <conio.h>  /* é€™é‚Šæœ‰ç”¨åˆ°getche()çš„åŠŸèƒ½ï¼Œæ‰€ä»¥å¿…é ˆinclude <conio.h> */
+#include <ctype.h>  /* è‹±æ–‡å­—å…ƒé–“çš„è½‰æ›éœ€è¦include<ctype.h> */
 
-int main () 
+int main ()
 {
- 	char ch, ch2;
-	printf("½Ğ¿é¤J¤@¤p¼gªº­^¤å¦r¥À: ");
-	ch=getche();//getche()³o­Ó¨ç¦¡¥u­n¤@°»´ú¨ì¦³¦r¤¸¿é¤J¡A´N·|¥ß§YÅª¤J
-	
-	//±N¤U¦Cªº¦r¤¸Âà¬°¤j¼g
-	ch2=toupper(ch);//­^¤å¤p¼gÂà¦¨¤j¼gªº¨ç¦¡toupper()
-	printf("\n%cªº¤j¼g¬O%c", ch, ch2);
-	
- 	//±N¤U¦Cªº¦r¤¸Âà¬°¤p¼g
-	printf("\n½Ğ¿é¤J¤@¤j¼gªº­^¤å¦r¥À: ");
-	scanf("%c", &ch);
-	ch2=tolower(ch);
-	printf("%cªº¤p¼g¬O%c\n", ch, ch2);
-	
-	system("PAUSE");
-	return 0;
+    char ch, ch2;
+
+    printf("è«‹è¼¸å…¥ä¸€å°å¯«çš„è‹±æ–‡å­—æ¯: ");
+    ch=getche();  /* getche()é€™å€‹å‡½å¼åªè¦ä¸€åµæ¸¬åˆ°æœ‰å­—å…ƒè¼¸å…¥ï¼Œå°±æœƒç«‹å³æ¯’å…¥ */
+
+    /* å°‡ä¸‹åˆ—çš„å­—å…ƒè½‰ç‚ºå¤§å¯« */
+    ch2=toupper(ch);  /* è‹±æ–‡å°å¯«è½‰æˆå¤§å¯«çš„å‡½å¼toupper() */
+    printf("\n%cçš„å¤§å¯«æ˜¯%c", ch, ch2);
+
+    /* å°‡ä¸‹åˆ—çš„å­—å…ƒè½‰ç‚ºå°å¯« */
+    printf("\nè«‹è¼¸å…¥ä¸€å¤§å¯«çš„è‹±æ–‡å­—æ¯: ");
+    scanf("%c", &ch);
+    ch2=tolower(ch);
+    printf("%cçš„å°å¯«æ˜¯%c\n", ch, ch2);
+    system("PAUSE");
+
+    return 0;
 }

@@ -1,34 +1,34 @@
+/* TQC+ C - 602 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int main () 
+int main ()
 {
- 	char str2[]="Apple iPod";
- 	char str4[]="Apple iPad";
-	int n;
-	
-	n=strcmp(str2, str4);
-	//strcmp()±Èİ^×Ö´®µÄº¯Ê½£¬Èç¹ûÇ°Ãæ´óì¶ááÃæ„tÊÇtrue=1£¬ÏàµÈé0£¬Ğ¡ì¶„tÊÇ-1
-		if (n>0) {
-	printf("%s´óì¶%s\n", str2, str4);
-	} else if (n==0) {//—l¼şÊ½ÏàµÈÓÃ==
-	printf("%sµÈì¶%s\n", str2, str4);
+    char str2[]="Apple iPod";
+    char str4[]="Apple iPad";
+    int n;
 
-	} else {
-	printf("%sĞ¡ì¶%s\n", str2, str4);
+    n=strcmp(str2, str4);
+    /* strcmp()æ¯”è¼ƒå­—ä¸²çš„å‡½å¼ï¼Œå¦‚æœå‰é¢å¤§æ–¼å¾Œé¢å‰‡æ˜¯true=1ï¼Œç›¸ç­‰ç‚º0ï¼Œå°æ–¼å‰‡æ˜¯-1 */
+    if (n > 0) {
+        printf("%så¤§æ–¼%s\n", str2, str4);
+    } else if (n == 0) {  /* æ¢ä»¶å¼ç›¸ç­‰ç”¨== */
+        printf("%sç­‰æ–¼%s\n", str2, str4);
+    } else {
+        printf("%så°æ–¼%s\n", str2, str4);
+    }
 
-	}
+    n=strncmp(str2, str4, 5);
+    if (n>0) {
+        printf("%så‰äº”å€‹å­—å…ƒå¤§æ–¼%så‰äº”å€‹å­—å…ƒ\n", str2, str4);
+    } else if (n==0) {//æ¢ä»¶å¼ç›¸ç­‰ç”¨==
+        printf("%så‰äº”å€‹å­—å…ƒç­‰æ–¼%så‰äº”å€‹å­—å…ƒ\n", str2, str4);
+    } else {
+        printf("%så‰äº”å€‹å­—å…ƒå°æ–¼%så‰äº”å€‹å­—å…ƒ\n", str2, str4);
+    }
+    system("PAUSE");
 
-	n=strncmp(str2, str4, 5);
-	if (n>0) {
-	printf("%sÇ°Îå‚€×ÖÔª´óì¶%sÇ°Îå‚€×ÖÔª\n", str2, str4);
-	} else if (n==0) {//—l¼şÊ½ÏàµÈÓÃ==
-	printf("%sÇ°Îå‚€×ÖÔªµÈì¶%sÇ°Îå‚€×ÖÔª\n", str2, str4);
-		
-	} else {
-	printf("%sÇ°Îå‚€×ÖÔªĞ¡ì¶%sÇ°Îå‚€×ÖÔª\n", str2, str4);
-	}
-	system("PAUSE");
-	return 0;
+    return 0;
 }

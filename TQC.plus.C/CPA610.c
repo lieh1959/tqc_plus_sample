@@ -1,33 +1,38 @@
+/* TQC+ C - 610 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int main () 
+
+int main ()
 {
-     FILE *fptr;
-	char name[20];
-	int score;
-	fptr=fopen("score.dat", "w");
-	printf("½Ğ¿é¤J©m¦W: ");
-	scanf("%s", name);
-	printf("½Ğ¿é¤J¤À¼Æ: ");
-	scanf("%d", &score);
-	
-	while (score != -100) {
-	fprintf(fptr,"%s %d", name, score);
-	//°µ¦³ÃöÀÉ®×Åª¨ú®É¡A°Ñ¼Æªº²Ä¤@­Ó³q±`»İ­n¥ı§iª¾ÀÉ®×ªº«ü¼Ğ
-	printf("½Ğ¿é¤J©m¦W: ");
-	scanf("%s", name);
-	printf("½Ğ¿é¤J¤À¼Æ: ");
-	scanf("%d", &score);		
-	}
-	
-     fclose(fptr);
-	
-	fptr=fopen("score.dat", "r");
-	printf("\n¥H¤U¬O±z¿é¤Jªº¸ê®Æ:\n");
-	while (fscanf(fptr,"%s %d", name, &score) !=EOF) 
-	printf("%-10s %3d\n", name, score);
-	
-	system("PAUSE");
-	return 0;
+    FILE *fptr;
+    char name[20];
+    int score;
+
+    fptr=fopen("score.dat", "w");
+    printf("è«‹è¼¸å…¥å§“å: ");
+    scanf("%s", name);
+    printf("è«‹è¼¸å…¥åˆ†æ•¸: ");
+    scanf("%d", &score);
+
+    while (score != -100) {
+        fprintf(fptr,"%s %d", name, score);
+        /* åšæœ‰é—œæª”æ¡ˆè®€å–æ™‚ï¼Œåƒæ•¸çš„ç¬¬ä¸€å€‹é€šå¸¸éœ€è¦å…ˆå‘ŠçŸ¥æª”æ¡ˆçš„æŒ‡æ¨™ */
+        printf("è«‹è¼¸å…¥å§“å: ");
+        scanf("%s", name);
+        printf("è«‹è¼¸å…¥åˆ†æ•¸: ");
+        scanf("%d", &score);
+    }
+
+    fclose(fptr);
+
+    fptr=fopen("score.dat", "r");
+    printf("\nä»¥ä¸‹æ˜¯æ‚¨è¼¸å…¥çš„è³‡æ–™:\n");
+
+    while (fscanf(fptr,"%s %d", name, &score) !=EOF)
+        printf("%-10s %3d\n", name, score);
+    system("PAUSE");
+
+    return 0;
 }

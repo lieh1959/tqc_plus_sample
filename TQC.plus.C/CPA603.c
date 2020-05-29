@@ -1,33 +1,35 @@
+/* TQC+ C - 603 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int main () 
+int main ()
 {
- 	char str2[]="Apple iPod";
- 	char str4[]="Apple iPad";
-	int n;
-	
-	n=strcmp(str2, str4);//¤ñ¸û¦r¦êªº¨ç¦¡strcmp()¦³°Ï¤À¤j¤p¼g
-	if (n>0) {
-	printf("%s¤j©ó%s\n", str2, str4);
-	} else if (n==0) {
-	printf("%sµ¥©ó%s\n", str2, str4);
-		
-	} else {
-	printf("%s¤p©ó%s\n", str2, str4);
-		
-	}
-	
-	n=strncmp(str2, str4,5);//¤ñ¸û«e´X¦rªº¦r¦ê¨ç¦¡strncmp()¦³°Ï¤À¤j¤p¼g
-	if (n>0) {
-	printf("%s«e¤­­Ó¦r¤¸¤j©ó%s«e¤­­Ó¦r¤¸\n", str2, str4);
-	} else if (n==0) {
-	printf("%s«e¤­­Ó¦r¤¸µ¥©ó%s«e¤­­Ó¦r¤¸\n", str2, str4);
-		
-	} else {
-	printf("%s«e¤­­Ó¦r¤¸¤p©ó%s«e¤­­Ó¦r¤¸\n", str2, str4);
-	}
-	system("PAUSE");
-	return 0;
+    char str2[]="Apple iPod";
+    char str4[]="Apple iPad";
+    int n;
+
+    n=strcmp(str2, str4);
+    /* æ¯”è¼ƒå­—ä¸²çš„å‡½å¼strcmp()æœ‰å€åˆ†å¤§å°å¯« */
+    if (n>0) {
+        printf("%så¤§æ–¼%s\n", str2, str4);
+    } else if (n==0) {
+        printf("%sç­‰æ–¼%s\n", str2, str4);
+    } else {
+        printf("%så°æ–¼%s\n", str2, str4);
+    }
+
+    n=strncmp(str2, str4,5);
+    /* æ¯”è¼ƒå‰å¹¾å­—çš„å­—ä¸²å‡½å¼strncmp()æœ‰å€åˆ†å¤§å°å¯« */
+    if (n > 0) {
+        printf("%så‰äº”å€‹å­—å…ƒå¤§æ–¼%så‰äº”å€‹å­—å…ƒ\n", str2, str4);
+    } else if (n==0) {
+        printf("%så‰äº”å€‹å­—å…ƒç­‰æ–¼%så‰äº”å€‹å­—å…ƒ\n", str2, str4);
+    } else {
+        printf("%så‰äº”å€‹å­—å…ƒå°æ–¼%så‰äº”å€‹å­—å…ƒ\n", str2, str4);
+    }
+    system("PAUSE");
+
+    return 0;
 }
