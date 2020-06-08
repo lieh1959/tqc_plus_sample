@@ -12,7 +12,7 @@ int main ( )
     printf("交換前i與j的值: \n");
     printf("i=%d, j=%d\n", i, j);
 
-    change(&i, &j);//取出記憶體位址
+    change(&i, &j); /* 取出記憶體位址 */
     printf("交換後i與j的值: \n");
     printf("i=%d, j=%d\n", i, j);
     system("PAUSE");
