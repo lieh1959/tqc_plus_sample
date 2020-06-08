@@ -1,3 +1,5 @@
+/* TQC+ C - 806 */
+
 #include<stdlib.h>
 #include<stdio.h>
 
@@ -6,33 +8,36 @@ void printStar(int);
 
 int main(){
 
-	int m,s;
-	printf("½Ð¿é¤J±z­n´X¦¨¤vªº­¼ªkªí(³Ì¦h10):");
-	scanf("%d",&m);
-	printf("\n½Ð¿é¤J±z­n´X­Ó¬P¬P(*):");
-	scanf("%d",&s);
-	printStar(s);
-	if(m<=10)//­n±±¨î¦n¡A10¥H¤U(§t)¤~Åã¥Ü
-	multiply(m);
-	printStar(s);
-	system("PAUSE");
-	return 0;
+    int m,s;
+
+    printf("è«‹è¼¸å…¥æ‚¨è¦å¹¾æˆå·±çš„ä¹˜æ³•è¡¨(æœ€å¤š10):");
+    scanf("%d",&m);
+    printf("\nè«‹è¼¸å…¥æ‚¨è¦å¹¾å€‹æ˜Ÿæ˜Ÿ(*):");
+    scanf("%d",&s);
+    printStar(s);
+    if(m<=10) /* è¦æŽ§åˆ¶å¥½ï¼Œ10ä»¥ä¸‹(å«)æ‰é¡¯ç¤º */
+    multiply(m);
+    printStar(s);
+    system("PAUSE");
+
+    return 0;
 }
 
-void multiply(int n){//­¼ªk¨ç¼Æ
-	int i,j;
-	for(i=1;i<=n;i++)
-	{
-		for(j=1;j<=n;j++)
-			printf("%d* %d=%2d  ",i,j,(i*j));
-		printf("\n");
-	}
+void multiply(int n){  /* ä¹˜æ³•å‡½æ•¸ */
+    int i,j;
+
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n;j++)
+            printf("%d* %d=%2d  ",i,j,(i*j));
+        printf("\n");
+    }
 }
 
-void printStar(int n)//¬P¸¹¦C¦L¨ç¼Æ
+void printStar(int n)  /*æ˜Ÿè™Ÿåˆ—å°å‡½æ•¸ */
 {
-	int i;
-	for(i=0;i<n;i++)
-	printf("*");
-	printf("\n");
+    int i;
+
+    for(i=0;i<n;i++)
+        printf("*");
+    printf("\n");
 }

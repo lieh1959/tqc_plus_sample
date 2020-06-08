@@ -1,3 +1,5 @@
+/* TQC+ C - 807 */
+
 #include<stdlib.h>
 #include<stdio.h>
 
@@ -5,45 +7,44 @@ void sorting(int*, int);
 
 int main(){
 
-int scoredata[10];
-int i;
-printf("½Ğ¿é¤J¤Q­Ó¼Æ...\n");
-for(i=0;i<10;i++)
-{
-	printf("²Ä %d ­Ó: ",(i+1));
-	scanf("%d",&scoredata[i]);
+    int scoredata[10];
+    int i;
+
+    printf("è«‹è¼¸å…¥åå€‹æ•¸...\n");
+    for(i=0;i<10;i++){
+       printf("ç¬¬ %d å€‹: ",(i+1));
+       scanf("%d",&scoredata[i]);
+    }
+
+   printf("æ’åºå‰:");
+   for(i=0;i<10;i++)
+       printf(" %d",scoredata[i]);
+
+    sorting(scoredata,10);
+    /* å› ç‚ºæ˜¯å‚³æŒ‡æ¨™éå»ï¼Œç›´æ¥æ“ä½œè¨˜æ†¶é«”ä¸­çš„è³‡æ–™ */
+
+    printf("\næ’åºå¾Œ:");
+    for(i=0;i<10;i++)
+        printf(" %d",scoredata[i]);
+    system("PAUSE");
+
+    return 0;
 }
 
-printf("±Æ§Ç«e:");
-for(i=0;i<10;i++)
-	printf(" %d",scoredata[i]);
+void sorting(int* data2,int n){/* é€™é¡Œè‘—é‡æ–¼æ­¤ */
 
-sorting(scoredata,10);//¦]¬°¬O¶Ç«ü¼Ğ¹L¥h¡A©Ò¥H©³¤U±Æ§Ç§¹¦¨«á¡A°O¾ĞÅé¤¤ªº­È¤]¤w¸g±Æ¦C¦n¤F
+    int i,j,LN=n-1;
 
-printf("\n±Æ§Ç«á:");
-for(i=0;i<10;i++)
-	printf(" %d",scoredata[i]);
+    for(i=0;i<LN;i++){
+        for(j = 0;j<LN;j++){
+            if(data2[j]>data2[j+1]){
+            /* å¦‚æœå‰é¢é‚£å€‹å€¼ï¼Œå¤§æ–¼å¾Œé¢çš„å€¼ï¼Œå‰‡äº¤æ› */
+                int temp = data2[j+1];
 
-
-	system("PAUSE");
-	return 0;
-}
-
-void sorting(int* data2,int n){//³oÃDµÛ­«©ó¦¹
-	int i,j,LN=n-1;
-
-  for(i=0;i<LN;i++)
-   {
-       for(j = 0;j<LN;j++)
-       {
-        
-        if(data2[j]>data2[j+1])//¦pªG«e­±¨º­Ó­È¡A¤j©ó«á­±ªº­È¡A«h¥æ´«
-        {
-         int temp = data2[j+1];
-            data2[j+1] = data2[j];
-           data2[j] = temp;
+                data2[j+1] = data2[j];
+                data2[j] = temp;
+            }
         }
-       }
-   }
-//¥Ñ¤W­±ªºµ{¦¡½X¥i±oª¾¸Óºtºâªk®É¶¡½ÆÂø«×¬° n ¥­¤è
+    }
+/* ç”±ä¸Šé¢çš„ç¨‹å¼ç¢¼å¯å¾—çŸ¥è©²æ¼”ç®—æ³•æ™‚é–“è¤‡é›œåº¦ç‚º n å¹³æ–¹ */
 }

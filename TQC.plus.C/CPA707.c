@@ -1,24 +1,26 @@
+/* TQC+ C - 707 */
+
 struct student {
-	char name[20];
-	int score;
+ char name[20];
+ int score;
 };
 
-typedef struct student ST;//ª`·N©w¸qªº¶¶§Ç
+typedef struct student ST;
+/* æ³¨æ„å®šç¾©çš„é †åº */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>//¦]¬°§Ú­Ì­n¨Ï¥Îstringªº¨ç¼Æ
+#include <string.h>
+/* å› ç‚ºæˆ‘å€‘è¦ä½¿ç”¨stringçš„å‡½æ•¸ */
 
-int main () 
+int main ()
 {
-	ST stname;
-	
- 	strcpy(stname.name , "Jonh");//±N¦r¦ê½Æ»s¶i¥h¸Ó°O¾ĞÅé
-	stname.score = 90;
-	
-  	printf("%sªº¤À¼Æ¬°%d\n", stname.name, stname.score);
+    ST stname;
 
-	system("PAUSE");
-     return 0;
+    strcpy(stname.name , "Jonh"); /* å°‡å­—ä¸²è¤‡è£½é€²å»è©²è¨˜æ†¶é«” */
+    stname.score = 90;
+    printf("%sçš„åˆ†æ•¸ç‚º%d\n", stname.name, stname.score);
+    system("PAUSE");
+
+    return 0;
 }
-

@@ -1,16 +1,21 @@
+/* TQC+ C - 706 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int main () 
+int main ()
 {
-	double x, y;//§ó§ï¬°double
-	double result;
-	printf("½Ğ¿é¤Jx, yªº­È: ");
-	scanf("%lf %lf", &x, &y);//¦]¬°­nÅª¤Jdouble¡A­n¥Î%lf
-    
-	result=((exp(5.0)*sqrt((pow(x, y)+log(100.0)))/pow(x, 2))*pow(y, 3));//¦b³o¨Ç¨ç¦¡¤¤ªº°Ñ¼Æ­n¥Îdouble¡Aexp(double)¡Bpow(double,double)¡Blog(double)
-	printf("result=%f\n", result);
-	system("PAUSE");
-     return 0;
+    double x, y; /* æ›´æ”¹ç‚ºdouble */
+    double result;
+
+    printf("è«‹è¼¸å…¥x, yçš„å€¼: ");
+    scanf("%lf %lf", &x, &y); /* å› ç‚ºè¦è®€å…¥doubleï¼Œè¦ç”¨%lf */
+
+    result=((exp(5.0)*sqrt((pow(x, y)+log(100.0)))/pow(x, 2))*pow(y, 3));
+    /* åœ¨é€™äº›å‡½å¼ä¸­çš„åƒæ•¸è¦ç”¨doubleï¼Œexp(double)ã€pow(double,double)ã€log(double) */
+    printf("result=%f\n", result);
+    system("PAUSE");
+
+    return 0;
 }

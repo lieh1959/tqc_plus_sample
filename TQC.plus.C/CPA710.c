@@ -1,32 +1,39 @@
+/* TQC+ C - 710 */
+
 #include <stdio.h>
 #include <stdlib.h>
-/* ­Y¨S¦³©w¸qKnum, «h¥[¥H©w¸q¬°1000 */
+/* è‹¥æ²’æœ‰å®šç¾©Knum, å‰‡åŠ ä»¥å®šç¾©ç‚º1000 */
 #ifndef Knum
 #define Knum 1000
 #endif
-/* ±NKnum¸Ñ°£©w¸q, ¤§«á¦A©w¸q¬°200 */
+/* å°‡Knumè§£é™¤å®šç¾©, ä¹‹å¾Œå†å®šç¾©ç‚º200 */
 #undef Knum
 #define Knum 200
 
-int main () 
+int main ()
 {
-	/* ¦L¥X³Ì«áªºKnum­È */
-	printf("Knum = %d\n", Knum);
-	
-	/* ¤U¦CªºÅÜ¼Æd©Mi¦@¥Î8­ÓBytes, ¤£¬O12­ÓBytes */
-	union dataType {
-		double d;
-		int	 i;
-	};
-	dataType dT;//­×§ïdataTypeªº«Å§i
-	printf("½Ğ¿é¤JdªºÅÜ¼Æ­È: ");//±N¨âÅÜ¼Æ¤À¶}¿é¤J©MÅã¥Ü
-	scanf("%lf", &dT.d); 	
-	printf("%lf\n", dT.d);
-	/* ¦L¥XdTÅÜ¼Æ¤¤ªºd©Mi */
-	printf("½Ğ¿é¤JiªºÅÜ¼Æ­È: ");
-	scanf("%d", &dT.i); 	
-	
-	printf("%d\n",  dT.i);
-	system("PAUSE");
-	return 0;
+    /* å°å‡ºæœ€å¾Œçš„Knumå€¼ */
+    printf("Knum = %d\n", Knum);
+
+    /* ä¸‹åˆ—çš„è®Šæ•¸då’Œiå…±ç”¨8å€‹Bytes, ä¸æ˜¯12å€‹Bytes */
+    union dataType {
+        double d;
+        int  i;
+    };
+
+    union dataType dT;  /* ä¿®æ”¹dataTypeçš„å®£å‘Š */
+
+    printf("è«‹è¼¸å…¥dçš„è®Šæ•¸å€¼: ");
+    /* å°‡å…©è®Šæ•¸åˆ†é–‹è¼¸å…¥å’Œé¡¯ç¤º */
+    scanf("%lf", &dT.d);
+    printf("%lf\n", dT.d);
+    /* å°å‡ºdTè®Šæ•¸ä¸­çš„då’Œi */
+
+    printf("è«‹è¼¸å…¥içš„è®Šæ•¸å€¼: ");
+    scanf("%d", &dT.i);
+
+    printf("%d\n",  dT.i);
+    system("PAUSE");
+
+    return 0;
 }

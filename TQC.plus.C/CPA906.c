@@ -1,29 +1,29 @@
+/* TQC+ C - 906 */
+
 #include<stdlib.h>
 #include<stdio.h>
 
-//«Å§i¤@­Óµ²ºc
+/* å®£å‘Šä¸€å€‹çµæ§‹ */
 struct student{
-char name[20];
-int score;
+    char name[20];
+    int score;
 };
 
 
 int main(){
-	struct student st[5];
-	int i;
-	for(i=0;i<5;i++)
-		 {
-			 printf("½Ğ¿é¤J²Ä%d¦ì¦P¾Çªº©m¦W:",(i+1));
-			 scanf("%s",st[i].name);
-			 printf("½Ğ¿é¤J²Ä%d¦ì¦P¾ÇC»y¨¥ªº¤À¼Æ:",(i+1));
-			 scanf("%d",&st[i].score );
-	}
-	for(i=0;i<5;i++){
-		printf("%-10s  %d\n",st[i].name ,st[i].score);
-		}
+    struct student st[5];
+    int i;
 
+    for(i=0;i<5;i++){
+        printf("è«‹è¼¸å…¥ç¬¬%dä½åŒå­¸çš„å§“å:",(i+1));
+        scanf("%s",st[i].name);
+        printf("è«‹è¼¸å…¥ç¬¬%dä½åŒå­¸Cèªè¨€çš„åˆ†æ•¸:",(i+1));
+        scanf("%d",&st[i].score );
+    }
+    for(i=0;i<5;i++){
+        printf("%-10s  %d\n",st[i].name ,st[i].score);
+    }
+    system("PAUSE");
 
-system("PAUSE");
-return 0;
+    return 0;
 }
-

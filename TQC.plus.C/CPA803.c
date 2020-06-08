@@ -1,23 +1,26 @@
+/* TQC+ C - 803 */
+
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(){
-	int i=0,a=0,b=0,c=0;
-	int ch;
-	while(i<10){//¿‚¹²ÓÐ10Æ±
-		printf("(1)Ð¡²Ì\n(2)Ð¡Íõ\n(3)Ð¡Ê·\nÕˆÄãÍ¶Æ±:");
-		scanf("%d",&ch);
-		if(ch==1)
-			a++;
-		else if(ch==2)
-			b++;
-		else if(ch==3)
-			c++;
-		else;//Ý”Èë1~3ÒÔÍâµÄ”µ×Ö£¬ÎÒ‚ƒ±ã°ÑËü®”³ÉUÆ±
-		printf("\nÐ¡²ÌµÃÆ±”µ%d\nÐ¡ÍõµÃÆ±”µ%d\nÐ¡Ê·µÃÆ±”µ%d\n\n",a,b,c);
-		i++;
-	}
-	system("PAUSE");
-	return 0;
+    int i=0,a=0,b=0,c=0;
+    int ch;
 
+    while(i<10){/* ç¸½å…±æœ‰10ç¥¨ */
+        printf("(1)å°è”¡\n(2)å°çŽ‹\n(3)å°å²\nè«‹ä½ æŠ•ç¥¨:");
+        scanf("%d",&ch);
+        if(ch==1)
+            a++;
+        else if(ch==2)
+            b++;
+        else if(ch==3)
+            c++;
+        else;/* è¼¸å…¥1~3ä»¥å¤–çš„æ•¸å­—ï¼Œæˆ‘å€‘ä¾¿æŠŠå®ƒç•¶æˆå»¢ç¥¨ */
+        printf("\nå°è”¡å¾—ç¥¨æ•¸%d\nå°çŽ‹å¾—ç¥¨æ•¸%d\nå°å²å¾—ç¥¨æ•¸%d\n\n",a,b,c);
+        i++;
+    }
+    system("PAUSE");
+
+    return 0;
 }

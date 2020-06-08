@@ -1,21 +1,25 @@
+/* TQC+ C - 705 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main () {
-	enum classify
-	{
-		Freshman, Sophomore, Junior, Senior
-	};	
+    enum classify {
+        Freshman, Sophomore, Junior, Senior
+    };
 
-     struct  student {
-		char *name;
-		enum classify id;
-	};
- 
-     struct  student st1;
-     st1.name="Peter";
-     st1.id=Junior;//ª½±µ¥Î¤¸¯À·í­È¡AµM«á¤j¤T¬OJunior
-	 printf("%s¬O¤j¤Tªº¾Ç¥Í\n", st1.name);//¦W¦r­n©I¥sst1.name
-	system("PAUSE");
-     return 0;
+    struct  student {
+        char *name;
+        enum classify id;
+    };
+
+    struct  student st1;
+
+    st1.name="Peter";
+    st1.id=Junior;//ç›´æ¥ç”¨å…ƒç´ ç•¶å€¼ï¼Œç„¶å¾Œå¤§ä¸‰æ˜¯Junior
+    printf("%sæ˜¯å¤§ä¸‰çš„å­¸ç”Ÿ\n", st1.name);//åå­—è¦å‘¼å«st1.name
+
+    system("PAUSE");
+
+    return 0;
 }

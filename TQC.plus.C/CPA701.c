@@ -1,17 +1,19 @@
+/* TQC+ C - 701 */
+
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-	char string[20];
-	double output;
-	printf("½Ğ¿é¤J¤@¼Æ¦rªº¦r¦ê: ");
-	scanf("%s", string);
- 
-	output=atof(string);//atoi()¬O±N¦r¦êÂà¦¨int®æ¦¡¡Aatofµô¥ÜÂà¦¨¯BÂI¼Æ
+    char string[20];
+    double output;
 
-     printf("%sÂà´««áªº¯BÂI¼Æ¬°%f\n", string, output);
-	system("PAUSE");
-     return 0;
+    printf("è«‹è¼¸å…¥ä¸€æ•¸å­—çš„å­—ä¸²: ");
+    scanf("%s", string);
+    output=atof(string);
+    /* atoi()æ˜¯å°‡å­—ä¸²è½‰æˆintæ ¼å¼ï¼Œatofæ‰æ˜¯è½‰æˆæµ®é»æ•¸ */
+    printf("%sè½‰æ›å¾Œçš„æµ®é»æ•¸ç‚º%f\n", string, output);
+    system("PAUSE");
+
+    return 0;
 }
-

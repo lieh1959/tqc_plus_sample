@@ -1,20 +1,25 @@
+/* TQC+ C - 708 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define random(x) rand()%x+1 //¶Ã¼Æ­n±q1~100¡A©Ò¥H»İ­n³]©w¦¨ rand()%x+1 ¡Arand()%x ¬°0~99
+#define random(x) rand()%x+1
+/* äº‚æ•¸è¦å¾1~100ï¼Œæ‰€ä»¥éœ€è¦è¨­å®šæˆ rand()%x+1 ï¼Œrand()%x ç‚º0~99 */
 
-int main() 
+int main()
 {
-	int i, j;
-	int x;
-	printf("ÀH¾÷¼Æªº³Ì¤j­È¬°: ");
-	scanf("%d", &x);
-	for (i=0; i<5; i++) {//ªì©l­Èi=0¶}©l
-		for (j=0; j<4; j++) {//ªì©l­Èi=0¶}©l
-			printf("%5d ", random(x));
-		}
-		printf("\n");
-	}
-	system("PAUSE");
-	return 0;
+    int i, j;
+    int x;
+
+    printf("éš¨æ©Ÿæ•¸çš„æœ€å¤§å€¼ç‚º: ");
+    scanf("%d", &x);
+    for (i=0; i<5; i++) {  /* åˆå§‹å€¼i=0é–‹å§‹ */
+        for (j=0; j<4; j++) {  /* åˆå§‹å€¼j=0é–‹å§‹ */
+            printf("%5d ", random(x));
+        }
+        printf("\n");
+    }
+    system("PAUSE");
+
+    return 0;
 }

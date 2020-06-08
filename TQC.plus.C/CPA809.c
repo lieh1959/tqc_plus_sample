@@ -1,43 +1,51 @@
-#include<stdlib.h>
-#include<stdio.h>
+/* TQC+ C - 809 */
 
-void sorting(int*, int);
+#include <stdio.h>
+#include <stdlib.h>
 
+void sort(int*,int);
 int main(){
+    int arr[15];
+    int arr2[5][3];
+    int n = 15,i,j,number=0;
 
-int arr[15];
-int i;
-printf("½Ð¿é¤J...\n");
-for(i=0;i<15;i++)
-{
-	printf("arr[%d]: ",i);
-	scanf("%d",&arr[i]);
+    printf("è«‹è¼¸å…¥...\n");
+
+    for(i=0;i<n;i++){
+        printf("arr[%d]: ",i);
+        scanf("%d",&arr[i]);
+    }
+    sort(arr,n);
+    for(i=0;i<5;i++){
+        for(j=0;j<3;j++){
+            arr2[i][j] = arr[number];
+            number++;
+         }
+    }
+
+    printf("å°å‡ºé™£åˆ—...");
+    for(i=0;i<5;i++){
+        for(j=0;j<3;j++){
+            printf("\narr2[%d][%d]=%d",i,j,arr2[i][j]);
+        }
+    }
+    system("PAUSE");
+
+    return 0;
 }
 
-sorting(arr,15);
+void sort(int *data,int n){
+    int i ,j,min,temp;
 
-printf("\n¦L¥X°}¦C:\n");
-for(i=0;i<15;i++)
-	printf("arr[%d]: %d\n",i,arr[i]);
-
-
-	system("PAUSE");
-	return 0;
-}
-
-void sorting(int* d,int n){
-	int LN =n;
-     int i,j,min,temp;
-     for(i = 0 ; i < LN ; i++)
-     {
-      //¥ý±N¤@¶}©lªº¦ì¸m¼g¤J
-      min=i;
-      for(j=(i+1);j<LN;j++)
-       if(d[j]<d[min])//¦pªG¤ñ¸û¨ì¤ñ¥¦§ó¤pªº¡A«h±N³Ì¤pªº¼g¤Jmin
-        min=j;
-       //±N¨â¼Æ­È¤¬¬Û¥æ´«
-      temp = d[i];
-      d[i] = d[min];
-      d[min]=temp;
-     }
+    for(i=0;i<n;i++){
+        min =i;
+        for(j=(i+1);j<n;j++){
+            if(data[j]<data[min]){
+                min =j ;
+                temp =data[i];
+                data[i]=data[min];
+                data[min]=temp;
+            }
+        }
+    }
 }

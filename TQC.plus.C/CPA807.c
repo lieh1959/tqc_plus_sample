@@ -1,3 +1,5 @@
+/* TQC+ C - 807 */
+
 #include<stdlib.h>
 #include<stdio.h>
 
@@ -6,33 +8,35 @@ void printStar(int);
 
 int main(){
 
-	int m,s;
-	printf("½Ð¿é¤J±z­n´X¦¨¤vªº­¼ªkªí(³Ì¦h10):");
-	scanf("%d",&m);
-	printf("\n½Ð¿é¤J±z­n´X­Ó¬P¬P(*):");
-	scanf("%d",&s);
-	printStar(s);
-	if(m<=10)
-	multiply(m);
-	printStar(s);
-	system("PAUSE");
-	return 0;
+    int m,s;
+
+    printf("è«‹è¼¸å…¥æ‚¨è¦å¹¾æˆå·±çš„ä¹˜æ³•è¡¨(æœ€å¤š10):");
+    scanf("%d",&m);
+    printf("\nè«‹è¼¸å…¥æ‚¨è¦å¹¾å€‹æ˜Ÿæ˜Ÿ(*):");
+    scanf("%d",&s);
+    printStar(s);
+    if(m<=10)
+        multiply(m);
+    printStar(s);
+    system("PAUSE");
+
+    return 0;
 }
 
 void multiply(int n){
-	int i,j;
-	for(i=1;i<=n;i++)
-	{
-		for(j=1;j<=n;j++)
-			printf("%2d  ",(i*j));//³oÃDºò¸ò¤W¤@ÃD®t§O¦bÅã¥Ü¦Ó¤w
-		printf("\n");
-	}
+   int i,j;
+
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n;j++)
+            printf("%2d  ",(i*j));//é€™é¡Œç·Šè·Ÿä¸Šä¸€é¡Œå·®åˆ¥åœ¨é¡¯ç¤ºè€Œå·²
+            printf("\n");
+        }
 }
 
 void printStar(int n)
 {
-	int i;
-	for(i=0;i<n;i++)
-	printf("*");
-	printf("\n");
+   int i;
+   for(i=0;i<n;i++)
+       printf("*");
+   printf("\n");
 }

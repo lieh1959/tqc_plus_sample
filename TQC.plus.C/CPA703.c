@@ -1,16 +1,21 @@
-#define NTRATE 31.34;//²Å¸¹±`¼Æ¡G³o¦æ«ü¥Oªí¥Ü¥HNTRATE¥N´À31.34
+/* TQC+ C - 703 */
+
+#define NTRATE 31.34;
+/* ç¬¦è™Ÿå¸¸æ•¸ï¼šé€™è¡ŒæŒ‡ä»¤è¡¨ç¤ºä»¥NTRATEä»£æ›¿31.34 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-	double USdollar, NTdollar;
-	printf("½Ğ¿é¤J±z¦³¦h¤Ö¬üª÷: ");
-	scanf("%lf", &USdollar);//¬O­nÅª¤Jdouble¡A©Ò¥H­n¥Î%lf
-	
-	NTdollar = USdollar * NTRATE;
-	printf("±z¥i¥H´«%.2f¥x¹ô\n", NTdollar);
-	system("PAUSE");
-     	return 0;
+    double USdollar, NTdollar;
+
+    printf("è«‹è¼¸å…¥æ‚¨æœ‰å¤šå°‘ç¾é‡‘: ");
+    scanf("%lf", &USdollar);
+    /* æ˜¯è¦è®€å…¥doubleï¼Œæ‰€ä»¥è¦ç”¨%lf */
+    NTdollar = USdollar * NTRATE;
+    printf("æ‚¨å¯ä»¥æ›%.2få°å¹£\n", NTdollar);
+    system("PAUSE");
+
+    return 0;
 }

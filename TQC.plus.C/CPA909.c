@@ -1,33 +1,38 @@
+/* TQC+ C - 909 */
+
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
 
 int main(){
-char a[30],b[30],c[30],cmp;
-printf("½Ğ¿é¤J¦r¦êA:");
-gets(a);//³oÃä¦bÅª¨ú¦r¦ê®É¡A¦]¬°­n¦Ò¶q¨ì¨Ï¥ÎªÌ·|¿é¤JªÅ¥Õ¦r¤¸¡A©Ò¥HµLªk¥Îscanf()¡A§Ú­Ì¥²¶·¨Ï¥Îgets()ªº¨ç¼Æ
+    char a[30],b[30],c[30],cmp;
 
-printf("¦r¦êAªºªø«×:%d",strlen(a));
-strcpy(b,a);//½Æ»s¦r¦êªº¨ç¼Æ
-printf("\n¦r¦êB:%s",b);
-printf("\n½Ğ¿é¤J¦r¦êC:");
-gets(c);
+    printf("è«‹è¼¸å…¥å­—ä¸²A:");
+    gets(a);
+    /* é€™é‚Šåœ¨è®€å–å­—ä¸²æ™‚ï¼Œå› ç‚ºè¦è€ƒé‡åˆ°ä½¿ç”¨è€…æœƒè¼¸å…¥ç©ºç™½å­—å…ƒï¼Œ
+     * æ‰€ä»¥ç„¡æ³•ç”¨scanf()ï¼Œæˆ‘å€‘å¿…é ˆä½¿ç”¨gets()çš„å‡½æ•¸
+     */
 
-cmp = strcmp(c,a);//¤ñ¸û¦r¦ê¤j¤pªº¨ç¼Æ
-//«e­±¤j©ó«á­±¡Aµ²ªG¬°1
-//¬Ûµ¥¡Aµ²ªG¬°0
-//«e­±¤j©ó«á­±¡Aµ²ªG¬°-1
+    printf("å­—ä¸²Açš„é•·åº¦:%d",strlen(a));
+    strcpy(b,a); /* è¤‡è£½å­—ä¸²çš„å‡½æ•¸ */
+    printf("\nå­—ä¸²B:%s",b);
+    printf("\nè«‹è¼¸å…¥å­—ä¸²C:");
+    gets(c);
 
+    cmp = strcmp(c,a);
+    /* æ¯”è¼ƒå­—ä¸²å¤§å°çš„å‡½æ•¸
+     * å‰é¢å¤§æ–¼å¾Œé¢ï¼Œçµæœç‚º1
+     * ç›¸ç­‰ï¼Œçµæœç‚º0
+     * å‰é¢å¤§æ–¼å¾Œé¢ï¼Œçµæœç‚º-1
+     */
 
-if(cmp==1)
-	printf("¦r¦êA¤p©ó¦r¦êC");
-else if(cmp==-1)
-	printf("¦r¦êC¤p©ó¦r¦êA");
-else
-	printf("¦r¦êCµ¥©ó¦r¦êA");
+    if(cmp==1)
+        printf("å­—ä¸²Aå°æ–¼å­—ä¸²C");
+    else if(cmp==-1)
+        printf("å­—ä¸²Cå°æ–¼å­—ä¸²A");
+    else
+        printf("å­—ä¸²Cç­‰æ–¼å­—ä¸²A");
+    system("PAUSE");
 
-	
-system("PAUSE");
-return 0;
+    return 0;
 }
-

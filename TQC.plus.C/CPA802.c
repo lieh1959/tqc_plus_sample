@@ -1,23 +1,28 @@
+/* TQC+ C - 802 */
+
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(){
-	int choice;
-	printf("(1)±Ğ±Â\n(2)°Æ±Ğ±Â\n(3)§U²z±Ğ±Â\n(4)³£¤£¬O\n(5)µ²§ô\n½Ğ¿é¤J±zªºÂ¾ºÙ¥N¸¹:");
-	scanf ("%d",&choice);
-	while(choice!=5){//¥u­n¨Ï¥ÎªÌ¨S¦³¿é¤J¨ì5¡A³£·|«ùÄò¥h¸ß°İ
-	switch (choice)//ª`·Nswitch caseªº¨Ï¥Î¤èªk
-	{
-	case 1:	printf("\n±zªºÂ¾ºÙ¬O±Ğ±Â\n");break;
-	case 2:	printf("\n±zªºÂ¾ºÙ¬O°Æ±Ğ±Â\n");break;
-	case 3:	printf("\n±zªºÂ¾ºÙ¬O§U²z±Ğ±Â\n");break;
-	case 4:	printf("\n±zªºÂ¾ºÙ¨S¦³¦b³o¨Ç¿ï¶µ¤º\n");break;
-	case 5:	break;
-	}
-	printf("\n(1)±Ğ±Â\n(2)°Æ±Ğ±Â\n(3)§U²z±Ğ±Â\n(4)³£¤£¬O\n(5)µ²§ô\n½Ğ¿é¤J±zªºÂ¾ºÙ¥N¸¹:");
-	scanf ("%d",&choice);
-	}
+    int choice;
 
-system ("PAUSE");
-return 0;
+    printf("(1)æ•™æˆ\n(2)å‰¯æ•™æˆ\n(3)åŠ©ç†æ•™æˆ\n(4)éƒ½ä¸æ˜¯\n(5)çµæŸ\nè«‹è¼¸å…¥æ‚¨çš„è·ç¨±ä»£è™Ÿ:");
+    scanf ("%d",&choice);
+
+    while(choice!=5){
+    /* åªè¦ä½¿ç”¨è€…æ²’æœ‰è¼¸å…¥åˆ°5ï¼Œéƒ½æœƒæŒçºŒå»è©¢å• */
+        switch (choice){
+        /* æ³¨æ„switch caseçš„ä½¿ç”¨æ–¹æ³• */
+            case 1: printf("\næ‚¨çš„è·ç¨±æ˜¯æ•™æˆ\n");break;
+            case 2: printf("\næ‚¨çš„è·ç¨±æ˜¯å‰¯æ•™æˆ\n");break;
+            case 3: printf("\næ‚¨çš„è·ç¨±æ˜¯åŠ©ç†æ•™æˆ\n");break;
+            case 4: printf("\næ‚¨çš„è·ç¨±æ²’æœ‰åœ¨é€™äº›é¸é …å…§\n");break;
+            case 5: break;
+        }
+        printf("\n(1)æ•™æˆ\n(2)å‰¯æ•™æˆ\n(3)åŠ©ç†æ•™æˆ\n(4)éƒ½ä¸æ˜¯\n(5)çµæŸ\nè«‹è¼¸å…¥æ‚¨çš„è·ç¨±ä»£è™Ÿ:");
+        scanf ("%d",&choice);
+    }
+    system ("PAUSE");
+
+    return 0;
 }

@@ -1,22 +1,24 @@
-#define TRIPLE(x) x*x*x;//µ²§À­n¦³¤À¸¹
-//©w¸q¤@­Ó¤èµ{¦¡
+/* TQC+ C - 704 */
+
+#define TRIPLE(x) x*x*x; /* çµå°¾è¦æœ‰åˆ†è™Ÿ */
+/* å®šç¾©ä¸€å€‹æ–¹ç¨‹å¼ */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () 
+int main ()
 {
-	int num, triple_num;
-	printf("½Ğ¿é¤J¤@­Ó¾ã¼Æ: ");
-	scanf("%d", &num);
-	
-	triple_num = TRIPLE(num);
-	printf("%dªº¤T¦¸¤è¬°%d\n", num,triple_num);//°Ñ¼Æ¤Ö¤@­Ónum
-	
-	triple_num = TRIPLE((4+1));
-	//­n²M·¡¥¦ªº¹B§@¶¶§Ç¡A»İ­n¥ıÅı4+1³B²z§¹¡A©Ò¥H§Ú­Ì±N¥¦¬A¸¹°_¨Ó
-	printf("5ªº¤T¦¸¤è¬°%d\n", triple_num);
+    int num, triple_num;
 
-	system("PAUSE");
-     return 0;
+    printf("è«‹è¼¸å…¥ä¸€å€‹æ•´æ•¸: ");
+    scanf("%d", &num);
+    triple_num = TRIPLE(num);
+    printf("%dçš„ä¸‰æ¬¡æ–¹ç‚º%d\n", num,triple_num); /* åƒæ•¸å°‘ä¸€å€‹num */
+    triple_num = TRIPLE((4+1));
+    /* è¦æ¸…æ¥šå®ƒçš„é‹ä½œé †åºï¼Œéœ€è¦å…ˆè®“4+1è™•ç†å®Œï¼Œæ‰€ä»¥æˆ‘å€‘å°‡å®ƒæ‹¬è™Ÿèµ·ä¾† */
+    printf("5çš„ä¸‰æ¬¡æ–¹ç‚º%d\n", triple_num);
+    system("PAUSE");
+
+    return 0;
 }
+

@@ -1,33 +1,39 @@
+/* TQC+ C - 903 */
+
 #include<stdlib.h>
 #include<stdio.h>
 
-//«Å§i¨ç¼Æ
+/* å®£å‘Šå‡½æ•¸ */
 int greater60(int* ,int );
 
-int main(){
-	int data[6];
-	int i;
-	for(i=0;i<6;i++){
-	printf("½Ð¿é¤J²Ä%d­Ó¤À¼Æ:",(i+1));
-	scanf("%d",&data[i]);
-	}
+int main()
+{
+    int data[6];
+    int i;
 
-	printf("±z¿é¤Jªº¸ê®Æ¦p¤U:\n");
-	for(i=0;i<6;i++){
-	printf("\ndata[%d]:%d",i,data[i]);
-	}
-	printf("\n¤j©ó60¤À±o¦³:%d­Ó",greater60(data,6));
+    for(i=0;i<6;i++){
+        printf("è«‹è¼¸å…¥ç¬¬%då€‹åˆ†æ•¸:",(i+1));
+        scanf("%d",&data[i]);
+    }
 
-system("PAUSE");
-return 0;
+    printf("æ‚¨è¼¸å…¥çš„è³‡æ–™å¦‚ä¸‹:\n");
+    for(i=0;i<6;i++){
+        printf("\ndata[%d]:%d",i,data[i]);
+    }
+    printf("\nå¤§æ–¼60åˆ†å¾—æœ‰:%då€‹",greater60(data,6));
+    system("PAUSE");
+
+    return 0;
 }
 
-int greater60(int* parr,int n){
-	int i,c=0;
-	for(i=0;i<n;i++)
-	{
-		if(parr[i]>=60)
-			c++;
-	}
-	return c;
+int greater60(int* parr,int n)
+{
+    int i,c=0;
+
+    for(i=0;i<n;i++){
+        if(parr[i]>=60)
+        c++;
+    }
+
+    return c;
 }

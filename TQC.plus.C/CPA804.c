@@ -1,30 +1,34 @@
+/* TQC+ C - 804 */
+
 #include<stdlib.h>
 #include<stdio.h>
 
 double average(double* ,int );
 
 int main(){
-	int i;
-	double cc[6],ans;
-	for(i =0;i<6;i++)
-	{
-		printf("½Ð¿é¤J²Ä%d­Ó¯BÂI¼Æ:",(i+1));
-		scanf("%lf",&cc[i]);
-	}
-	printf("\n±z¿é¤Jªº°}¦C­È¦p¤U\n");
-	for(i =0;i<6;i++)
-		printf("\ndata[%d]:%.2f",i,cc[i]);
-	ans = average(cc,6);
-	printf("\n¥­§¡:%.2f",ans);
-	system("PAUSE");
-	return 0;
+    int i;
+    double cc[6],ans;
+    for(i =0;i<6;i++){
+        printf("è«‹è¼¸å…¥ç¬¬%då€‹æµ®é»žæ•¸:",(i+1));
+        scanf("%lf",&cc[i]);
+    }
+    printf("\næ‚¨è¼¸å…¥çš„é™£åˆ—å€¼å¦‚ä¸‹");
+    for(i =0;i<6;i++)
+        printf("\ndata[%d]:%.2f",i,cc[i]);
+    ans = average(cc,6);
+    printf("\nå¹³å‡:%.2f",ans);
+    system("PAUSE");
+
+    return 0;
 }
 
-double average(double* arr2,int n){//°}¦C¶Ç°Ñ¼Æ¤è¦¡¡A¨Ï¥Î«ü¼Ð
-	double total=0;
-	int i ;
-	for(i=0;i<n;i++ )
-		total+=*(arr2+i);//ª`·N«ü¼Ð©I¥s«ü¼Ð¤ºªº­È
-	total/=n;
-	return total;
+double average(double* arr2,int n){  /* é™£åˆ—å‚³åƒæ•¸æ–¹å¼ï¼Œä½¿ç”¨æŒ‡æ¨™ */
+    double total=0;
+    int i ;
+
+    for(i=0;i<n;i++ )
+        total+=*(arr2+i);  /* æ³¨æ„æŒ‡æ¨™å‘¼å«æŒ‡æ¨™å…§çš„å€¼ */
+    total/=n;
+
+    return total;
 }

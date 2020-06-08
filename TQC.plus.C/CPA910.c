@@ -1,51 +1,52 @@
+/* TQC+ C - 910 */
 
 #include<stdlib.h>
 #include<stdio.h>
+
 struct node{
 	char name[10];
 	int score;
-	struct node* next;};
+	struct node* next;
+};
 
-int main(){
-	
-	
+int main()
+{
 	struct node *a,*b,*c,*current;
-	
-	a=(node*)malloc(sizeof(node));//°t¸m°ÊºA°O¾ĞÅé¤j¤p¤è¦¡
-	printf("½Ğ¿é¤J²Ä¤@­Ó¾Ç¥Í©m¦W: ");
+	a=(struct node*)malloc(sizeof(struct node)); /* é…ç½®å‹•æ…‹è¨˜æ†¶é«”å¤§å°æ–¹å¼ */
+	printf("è«‹è¼¸å…¥ç¬¬ä¸€å€‹å­¸ç”Ÿå§“å: ");
 	scanf("%s",a->name);
-	printf("¤À¼Æ: ");
+	printf("åˆ†æ•¸: ");
 	scanf("%d",&a->score );
-	a->next=NULL;//¦]¬°¤£½T©w«á­±¬O§_ÁÙ·|¦³«ü¼Ğ¡A©Ò¥H¥ı³]©w¦¨NULL
+	a->next=NULL; /* å› ç‚ºä¸ç¢ºå®šå¾Œé¢æ˜¯å¦é‚„æœƒæœ‰æŒ‡æ¨™ï¼Œæ‰€ä»¥å…ˆè¨­å®šæˆNULL */
 
-	b=(node*)malloc(sizeof(node));
-	printf("½Ğ¿é¤J²Ä¤G­Ó¾Ç¥Í©m¦W: ");
+	b=(struct node*)malloc(sizeof(struct node));
+	printf("è«‹è¼¸å…¥ç¬¬äºŒå€‹å­¸ç”Ÿå§“å: ");
 	scanf("%s",b->name);
-	printf("¤À¼Æ: ");
+	printf("åˆ†æ•¸: ");
 	scanf("%d",&b->score );
-	a->next=b;//b³]©w§¹¦¨«á¡A«K½T©wa¤§«á¦³b
-	b->next=NULL;//b¤§«á¤£½T©w¬O§_ÁÙ¦³«ü¼Ğ¡A³]©w¦¨NULL
+	a->next=b; /* bè¨­å®šå®Œæˆå¾Œï¼Œä¾¿ç¢ºå®šaä¹‹å¾Œæœ‰b */
+	b->next=NULL; /* bä¹‹å¾Œä¸ç¢ºå®šæ˜¯å¦é‚„æœ‰æŒ‡æ¨™ï¼Œè¨­å®šæˆNULL */
 
-	c=(node*)malloc(sizeof(node));
-	printf("½Ğ¿é¤J²Ä¤T­Ó¾Ç¥Í©m¦W: ");
+	c=(struct node*)malloc(sizeof(struct node));
+	printf("è«‹è¼¸å…¥ç¬¬ä¸‰å€‹å­¸ç”Ÿå§“å: ");
 	scanf("%s",c->name);
-	printf("¤À¼Æ: ");
+	printf("åˆ†æ•¸: ");
 	scanf("%d",&c->score );
 	b->next=c;
 	c->next=NULL;
-	printf("\n¿é¥X...\n");
+	printf("\nè¼¸å‡º...\n");
 
 	current = a;
 	while(current!=NULL){
-		printf("¾Ç¥Í: %s\n",current->name);
-		printf("¤À¼Æ: %d\n\n",current->score);
-		current=current->next;//¨CÅã¥Ü§¹²¦«á¤@¦¸¡A±N«ü¼Ğ«üµ¹¤U¤@­Ó
+		printf("å­¸ç”Ÿ: %s\n",current->name);
+		printf("åˆ†æ•¸: %d\n\n",current->score);
+		current=current->next; /* æ¯é¡¯ç¤ºå®Œç•¢å¾Œä¸€æ¬¡ï¼Œå°‡æŒ‡æ¨™æŒ‡çµ¦ä¸‹ä¸€å€‹ */
 	}
 
-free(a);//ÄÀ©ñ°O¾ĞÅé
- 	 free(b);//ÄÀ©ñ°O¾ĞÅé
-	 free(c);//ÄÀ©ñ°O¾ĞÅé
-system("PAUSE");
-return 0;
-}
+	free(a); /* é‡‹æ”¾è¨˜æ†¶é«” */
+ 	free(b); /* é‡‹æ”¾è¨˜æ†¶é«” */
+	free(c); /* é‡‹æ”¾è¨˜æ†¶é«” */
+	system("PAUSE");
 
+	return 0;
+}

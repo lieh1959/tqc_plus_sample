@@ -1,55 +1,58 @@
+/* TQC+ C - 907 */
+
 #include<stdlib.h>
 #include<stdio.h>
-
 
 char GPA(int);
 
 int main(){
+    struct student{
+        char name[20];
+        int score;
+    }; /* å®£å‘Šä¸€å€‹çµæ§‹ */
+    struct student st1,st2,st3;
 
-	struct student{char name[20];int score;};//«Å§i¤@­Óµ²ºc
-	struct student st1,st2,st3;
-	
+    printf("è«‹è¼¸å…¥ç¬¬ä¸€ä½å­¸ç”Ÿå§“å: ");
+    scanf("%s",st1.name);
+    printf("è«‹è¼¸å…¥ç¬¬ä¸€ä½å­¸ç”Ÿæˆç¸¾: ");
+    scanf("%d",&st1.score);
 
-	printf("½Ð¿é¤J²Ä¤@¦ì¾Ç¥Í©m¦W: ");
-	scanf("%s",st1.name);
-	printf("½Ð¿é¤J²Ä¤@¦ì¾Ç¥Í¦¨ÁZ: ");
-	scanf("%d",&st1.score);
+    printf("è«‹è¼¸å…¥ç¬¬äºŒä½å­¸ç”Ÿå§“å: ");
+    scanf("%s",st2.name);
+    printf("è«‹è¼¸å…¥ç¬¬äºŒä½å­¸ç”Ÿæˆç¸¾: ");
+    scanf("%d",&st2.score);
 
-	printf("½Ð¿é¤J²Ä¤G¦ì¾Ç¥Í©m¦W: ");
-	scanf("%s",st2.name);
-	printf("½Ð¿é¤J²Ä¤G¦ì¾Ç¥Í¦¨ÁZ: ");
-	scanf("%d",&st2.score);
+    printf("è«‹è¼¸å…¥ç¬¬ä¸€ä½å­¸ç”Ÿå§“å: ");
+    scanf("%s",st3.name);
+    printf("è«‹è¼¸å…¥ç¬¬ä¸€ä½å­¸ç”Ÿæˆç¸¾: ");
+    scanf("%d",&st3.score);
 
-	printf("½Ð¿é¤J²Ä¤@¦ì¾Ç¥Í©m¦W: ");
-	scanf("%s",st3.name);
-	printf("½Ð¿é¤J²Ä¤@¦ì¾Ç¥Í¦¨ÁZ: ");
-	scanf("%d",&st3.score);
-	
-	printf("\n²Ä¤@¦ì¾Ç¥Í: %s",st1.name);
-	printf("\n¤À¼Æ: %d",st1.score );
-	printf ("\nGPA: %c",GPA(st1.score ));
+    printf("\nç¬¬ä¸€ä½å­¸ç”Ÿ: %s",st1.name);
+    printf("\nåˆ†æ•¸: %d",st1.score );
+    printf ("\nGPA: %c",GPA(st1.score ));
 
-		printf("\n²Ä¤G¦ì¾Ç¥Í: %s",st2.name);
-	printf("\n¤À¼Æ: %d",st2.score );
-	printf ("\nGPA: %c",GPA(st2.score ));
+    printf("\nç¬¬äºŒä½å­¸ç”Ÿ: %s",st2.name);
+    printf("\nåˆ†æ•¸: %d",st2.score );
+    printf ("\nGPA: %c",GPA(st2.score ));
 
-		printf("\n²Ä¤T¦ì¾Ç¥Í: %s",st3.name);
-	printf("\n¤À¼Æ: %d",st3.score );
-	printf ("\nGPA: %c",GPA(st3.score ));
+    printf("\nç¬¬ä¸‰ä½å­¸ç”Ÿ: %s",st3.name);
+    printf("\nåˆ†æ•¸: %d",st3.score );
+    printf ("\nGPA: %c",GPA(st3.score ));
 
-system("PAUSE");
-return 0;
+    system("PAUSE");
+
+    return 0;
 }
 
-char GPA(int i){//GPAªº¨ç¼Æ
-	char re;
-	if(i>=90)
-		re='A';
-	else if(i>=80&&i<90)//°Ï¶¡§PÂ_ªº¼gªk
-		re='B';
-	else if(i>=70&&i<80)
-		re='C';
-	else
-		re='D';
-	return re;
+char GPA(int i){//GPAçš„å‡½æ•¸
+ char re;
+ if(i>=90)
+  re='A';
+ else if(i>=80&&i<90)//å€é–“åˆ¤æ–·çš„å¯«æ³•
+  re='B';
+ else if(i>=70&&i<80)
+  re='C';
+ else
+  re='D';
+ return re;
 }
