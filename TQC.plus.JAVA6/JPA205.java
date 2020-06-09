@@ -1,4 +1,7 @@
+/* TQC+ JAVA6 - 205 */
+
 import java.util.*;
+
 public class JPA205 {
     static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
@@ -7,20 +10,22 @@ public class JPA205 {
         test();
         test();
     }
-    //¼g¤@­Ó¤èªk¨Ó°õ¦æ­¿¼Æ§PÂ_
+    //å¯«ä¸€å€‹æ–¹æ³•ä¾†åŸ·è¡Œå€æ•¸åˆ¤æ–·
+
     static void test() {
-    	System.out.println("Enter an integer:");
+        System.out.println("Enter an integer:");
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
-        //¥ı§PÂ_¬O§_¬O6ªº­¿¼Æ¡A¥Ñ³Ì¤jªº¼Æ¶}©l§PÂ_
+
+        //å…ˆåˆ¤æ–·æ˜¯å¦æ˜¯6çš„å€æ•¸ï¼Œç”±æœ€å¤§çš„æ•¸é–‹å§‹åˆ¤æ–·
         if ((a%6)==0)
-        	System.out.printf("%d¬O2¡B3¡B6ªº­¿¼Æ\n",a);
-        //¦pªG¤£¬O6ªº­¿¼Æ¡A¦A§PÂ_¬O§_¬°2©Î3ªº­¿¼Æ¡A¨ä¤¤§PÂ_2©Î3ªº¶¶§Ç¨S¦³®t
+            System.out.printf("%dæ˜¯2ã€3ã€6çš„å€æ•¸\n",a);
+        //å¦‚æœä¸æ˜¯6çš„å€æ•¸ï¼Œå†åˆ¤æ–·æ˜¯å¦ç‚º2æˆ–3çš„å€æ•¸ï¼Œå…¶ä¸­åˆ¤æ–·2æˆ–3çš„é †åºæ²’æœ‰å·®
         else if ((a%2)==0)
-        	System.out.printf("%d¬O2ªº­¿¼Æ\n",a);
+            System.out.printf("%dæ˜¯2çš„å€æ•¸\n",a);
         else if ((a%3)==0)
-        	System.out.printf("%d¬O3ªº­¿¼Æ\n",a);	
+            System.out.printf("%dæ˜¯3çš„å€æ•¸\n",a);
         else
-        	System.out.printf("%d¤£¬O2¡B3¡B6ªº­¿¼Æ\n",a);
-    }
+            System.out.printf("%dä¸æ˜¯2ã€3ã€6çš„å€æ•¸\n",a);
+   }
 }

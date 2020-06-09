@@ -1,25 +1,27 @@
+/* TQC+ JAVA6 - 209 */
+
 import java.util.*;
+
 public class JPA209 {
     static Scanner keyboard = new Scanner(System.in);
     public static void main(String[] args) {
-        test();        
+        test();
         test();
         test();
         test();
     }
-    
+
     public static void test() {
-    	
         Scanner sc = new Scanner(System.in);
-        double x,y; 
+        double x,y;
+
         System.out.print("請輸入 x 座標:");
         x = sc.nextDouble();
         System.out.print("請輸入 y 座標:");
         y = sc.nextDouble();
-       
+
         if(x==0.0&&y==0.0)
         	System.out.printf("(%1.2f,%1.2f)在原點上\n",x,y);
-        
         else if (x==0.0)
         	System.out.printf("(%1.2f,%1.2f)在y軸上\n",x,y);
         else if (y==0.0)

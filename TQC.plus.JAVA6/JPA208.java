@@ -1,4 +1,7 @@
+/* TQC+ JAVA6 - 208 */
+
 import java.util.*;
+
 class JPA208 {
     static Scanner keyboard = new Scanner(System.in);
     public static void main(String[] args) {
@@ -8,7 +11,7 @@ class JPA208 {
         test();
         test();
     }
-  
+
     //建立分數判斷的方法，在main方法中，宣告五次，便執行五次
     public static void test() {
     	System.out.println("Input:");

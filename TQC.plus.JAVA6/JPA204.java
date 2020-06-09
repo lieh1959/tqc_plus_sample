@@ -1,19 +1,22 @@
+/* TQC+ JAVA6 - 204 */
+
 import java.util.*;
+
 class JPA204 {
     static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         test();
         test();
     }
-  
+
     public static void test() {
     	System.out.println("Input:");
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
-        //ㄏノand笲衡才mod5=0㎝mod9=0计ㄏ眔if耞ΑΘミ
+        //使用and的運算，並且同時符合mod5=0和mod9=0的數字，使得if的判斷式成立
         if((a%5)==0 && (a%9)==0)
         	System.out.printf("Yes\n");
-        else 
+        else
         	System.out.printf("No\n");
         }
 }
