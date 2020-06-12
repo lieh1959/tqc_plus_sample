@@ -1,9 +1,14 @@
-package JPA601.JP06_1;
+/* TQC+ JAVA6 - 601_1 */
+
 //建立一個共有的方法
 class Unit{
 	int cost ;
-	Unit(){cost = 0;}
-	public int getCost(){return cost;}
+	Unit(){
+		cost = 0;
+	}
+	public int getCost(){
+		return cost;
+	}
 }
 //引擎方法，繼承Unit，取得成本方法
 class Engine extends Unit {
@@ -14,23 +19,24 @@ class Engine extends Unit {
 			 cost= 25000;
 	 }
  }
-//空調方法，繼承Unit，取得成本方法 
+//空調方法，繼承Unit，取得成本方法
 class Aircond extends Unit{
-	 Aircond(String s )
-	 {
+	 Aircond(String s ) {
 		 if(s.equals("auto"))
 			 cost = 12000;
-		 else 
+		 else
 			 cost = 10000;
 	 }
  }
 
 //音響方法，繼承Unit，取得成本方法
  class Sound  extends Unit{
-	 Sound(){cost = 2000;}
+	 Sound(){
+	 	cost = 2000;
+	 }
  }
- 
-public class JPD06_1 {
+
+public class JPA06_1 {
     public static void main(String args[]){
         //產生一個1600cc引擎物件
     	Engine e1 = new Engine(1600);
