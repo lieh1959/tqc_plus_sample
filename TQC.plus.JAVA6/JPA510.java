@@ -1,3 +1,5 @@
+/* TQC+ JAVA6 - 510 */
+
 import java.util.Scanner;
 public class JPA510 {
     public static Scanner targetboard = new Scanner(System.in);
@@ -22,25 +24,24 @@ public class JPA510 {
      }
     //二分法搜尋方法，真正在搜尋的地方
     //傳入值有三個，陣列，目標值，陣列長度
-    static int binary_search(int[] data,int target, int max)
-    {
-    int middle, left, right;
-    left = 0; right = max-1; // 設定啟始搜尋範圍: 左邊界及右邊界(右邊界由最大值減1得到)
-    while (left <= right)
-    {
-    	time++;
-    middle = (left + right) / 2;// 找出中間位置
-    System.out.printf("尋找區間: %d(%s)..%d(%s),中間： %d(%s)\n", 
-    		left,String.valueOf(data[left]),
-    		right,String.valueOf(data[right]),
-    		middle,String.valueOf(data[middle]));
-    if (target == data[middle]) return middle; // 找到資料, 傳回找到之位置
-    // 調整搜尋範圍
-    if (target < data[middle]) // 往左半邊找 (調整右邊界)
-    right = middle - 1;
-    else // 往右半邊找 (調整左邊界)
-    left = middle + 1;
-    }
-    return -1; // 沒找到資料, 傳回 -1
+    static int binary_search(int[] data,int target, int max){
+        int middle, left, right;
+        left = 0; right = max-1; // 設定啟始搜尋範圍: 左邊界及右邊界(右邊界由最大值減1得到)
+        while (left <= right){
+        	time++;
+            middle = (left + right) / 2;// 找出中間位置
+            System.out.printf("尋找區間: %d(%s)..%d(%s),中間： %d(%s)\n",
+        	                                            left,String.valueOf(data[left]),
+        		                                        right,String.valueOf(data[right]),
+        		                                        middle,String.valueOf(data[middle]));
+            if (target == data[middle])
+                return middle; // 找到資料, 傳回找到之位置
+            // 調整搜尋範圍
+            if (target < data[middle]) // 往左半邊找 (調整右邊界)
+                right = middle - 1;
+            else // 往右半邊找 (調整左邊界)
+                left = middle + 1;
+            }
+            return -1; // 沒找到資料, 傳回 -1
     }
 }

@@ -1,3 +1,5 @@
+/* TQC+ JAVA6 - 505 */
+
 public class JPA505 {
     public static void main(String[] argv) {
         String[] data = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
@@ -14,11 +16,11 @@ public class JPA505 {
     public static String[] reverse(String[] s) {
         String[] temp = new String[s.length];
     	int b=9;
-        for(int a=0;a<10;a++)
-        {
+        for(int a=0;a<10;a++) {
         	temp[b]=s[a];
         	b--;
         }
-    return temp;
+
+        return temp;
     }
 }

@@ -1,4 +1,7 @@
+/* TQC+ JAVA6 - 502 */
+
 import java.util.Scanner;
+
 public class JPA502 {
     public static Scanner keyboard = new Scanner(System.in);
     public static void main(String args[]) {
@@ -8,8 +11,7 @@ public class JPA502 {
         float sum = 0;
         float[] ps = new float[poe];
         //迴圈次數決定可輸入幾個學生成績，而迴圈次數由使用者輸入
-        for(int a =0;a<poe;a++)
-        {
+        for(int a =0;a<poe;a++){
         	System.out.print("第"+(a+1)+"個學生的成績:");
         	ps[a]=sc.nextFloat();
         	sum +=ps[a];

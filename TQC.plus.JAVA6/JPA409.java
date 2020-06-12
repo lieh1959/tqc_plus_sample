@@ -1,8 +1,10 @@
+/* TQC+ JAVA6 - 409 */
+
 import java.util.Scanner;
-public class JPD0409 {
+public class JPA409 {
     static Scanner keyboard = new Scanner(System.in);
     public static void main(String args[]) {
-        String s, c; 
+        String s, c;
         System.out.print("Input a string: ");
         s = keyboard.nextLine();
         System.out.print("Input a character: ");
@@ -14,7 +16,7 @@ public class JPD0409 {
         c = keyboard.nextLine();
         System.out.printf("%s\n", removeChar(s, c));
     }
-    
+
     static String removeChar(String s,String c)
     {
     	if(s.equals(""))//如果傳入的字串為空的話，則回傳空字串
