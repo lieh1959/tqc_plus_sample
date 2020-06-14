@@ -1,6 +1,4 @@
-package JPA605.JP06_2;
-
-
+/* TQC+ JAVA6 - 605_2 */
 
 abstract class MIS{
 	private String name;
@@ -19,7 +17,7 @@ class IT extends MIS {
 	private int pl;
 	private int db;
 	private int ds;
-	
+
 	IT(String s,int i,int j,int k,int l,int ii)
 	{
 		super(s,i,j);
@@ -55,12 +53,12 @@ class ITM extends IT{
 	//實作MIS的方法，複寫IT的方法
 	public double averageElect(){return (super.averageElect()+acct)/2.0;}
 	public double averageAll()	{return (super.averageMust()*0.4 + super.averageElect()*0.4 + acct*0.2);}
-	
+
 }
 
-public class JPD06_2 {
+public class JPA06_2 {
    public static void main(String argv[]) {
-       //建立MIS物件ITM 
+       //建立MIS物件ITM
 	   MIS s3 = new ITM("Mary", 79, 88, 94, 92, 83, 69);
         System.out.printf("Mary's elect score: %.2f all score %.2f\n", s3.averageElect(), s3.averageAll());
     }

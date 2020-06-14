@@ -1,4 +1,4 @@
-package JPA605.JP06_4;
+/* TQC+ JAVA6 - 605_4 */
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -9,73 +9,86 @@ abstract class MIS{
 	private int chi;
 	private int eng;
 	private static  int count =0;
-	public MIS(String s,int i,int j)
-	{name = s;chi = i;eng = j;count++;}
+	public MIS(String s,int i,int j){
+		name = s;
+		chi = i;
+		eng = j;
+		count++;
+	}
 	public abstract double averageElect();
-	public double averageMust(){return (double)((chi+eng)/2.0);}
-	public double averageAll()
-	{return averageElect()*0.6 + averageMust()*0.4;}
-	public static  int getCount(){return count;}
+	public double averageMust(){
+		return (double)((chi+eng)/2.0);
+	}
+	public double averageAll(){
+		return averageElect()*0.6 + averageMust()*0.4;
+	}
+	public static  int getCount(){
+		return count;
+	}
 }
 
 class IT extends MIS {
 	private int pl;
 	private int db;
 	private int ds;
-	
-	IT(String s,int i,int j,int k,int l,int ii)
-	{
+
+	IT(String s,int i,int j,int k,int l,int ii){
 		super(s,i,j);
 		pl=k;
 		db=l;
 		ds=ii;
 	}
-	
-	public double averageElect(){return (pl+db+ds)/3.0;}
+
+	public double averageElect(){
+		return (pl+db+ds)/3.0;
+	}
 }
 
 class IM extends MIS{
 	private int econ;
 	private int acct;
-IM(String s,int i,int j,int k ,int l)
-{
-super(s,i,j);
-econ = k;
-acct =l;
-}
-public double averageElect(){return (econ+acct)/2.0;}
-
+	IM(String s,int i,int j,int k ,int l){
+		super(s,i,j);
+		econ = k;
+		acct =l;
+	}
+	public double averageElect(){
+		return (econ+acct)/2.0;
+	}
 }
 
 class ITM extends IT{
 	private int acct;
-	ITM(String s,int i,int j,int k,int l,int ii,int jj)
-	{
+	ITM(String s,int i,int j,int k,int l,int ii,int jj){
 		super(s,i,j,k,l,ii);
 		acct=jj;
 	}
-	public double averageElect(){return (super.averageElect()+acct)/2.0;}
-	public double averageAll()	{return (super.averageMust()*0.4 + super.averageElect()*0.4 + acct*0.2);}
+	public double averageElect(){
+		return (super.averageElect()+acct)/2.0;
+	}
+	public double averageAll(){
+		return (super.averageMust()*0.4 + super.averageElect()*0.4 + acct*0.2);
+	}
 }
 
 //建立MISClass方法
 class MISClass {
 	private HashMap stu;
 	//建構子初始化為HashMap
-	MISClass()
-	{stu = new HashMap();}
+	MISClass(){
+		stu = new HashMap();
+	}
 	//建立方法，將學生的key,value放到HashMap
-	public void put(String s,MIS mis)
-	{stu.put(s, mis);}
-	
-	public void list() 
-	{
+	public void put(String s,MIS mis){
+		stu.put(s, mis);
+	}
+
+	public void list(){
 		//取出Map值用
 		Map.Entry entry = null;
 		MIS mis = null;
 		//透過Iterator將整份的Map(key,value)放入
-		for(Iterator iterator = stu.entrySet().iterator();iterator.hasNext();)
-		{
+		for(Iterator iterator = stu.entrySet().iterator();iterator.hasNext();){
 			//判斷是否還有下一個
 			entry = (Map.Entry)iterator.next();
 			//取出MIS物件
@@ -85,7 +98,7 @@ class MISClass {
 	}
 }
 
-public class JPD06_4 {
+public class JPA06_4 {
     public static void main(String argv[]) {
         //建立MIS物件IT、IM、ITM
     	MIS s1 = new IT("John", 88, 90, 76, 68, 84);
