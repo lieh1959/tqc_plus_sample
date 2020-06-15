@@ -90,9 +90,9 @@ class JPA06_1 {
 	public static void main(String args[]){
         //產生小筆電的物件
 		MiniNote mininote = new MiniNote();
-		System.out.println("MiniNote cost:"+mininote.getCost()+", price:"+(int)mininote.getPrice());
+		System.out.println("MiniNote cost:"+mininote.getCost()+", price:"+mininote.getPrice());
         //產生15吋筆電的物件
 		Note15 note15 = new Note15();
-		System.out.println("Note15 cost:"+note15.getCost()+", price:"+(int)note15.getPrice());
+		System.out.println("Note15 cost:"+note15.getCost()+", price:"+note15.getPrice());
 	}
 }
